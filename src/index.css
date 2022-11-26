@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
 /*ESTILOS GENERALES*/
 /* Reset CSS */
 * {
@@ -17,11 +19,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .bs--navbar {
   background-image: url("./images/consultorio_header.webp");
   background-size: cover;
@@ -30,7 +27,47 @@ code {
   border-radius: 4px;
 }
 
+.navbar--row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  width: 100%;
+}
+
 .image {
 	box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
 	border-radius: 4px;
+}
+
+.display-1--subtitle, .display-1--description {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 4px #fff7ef;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#nav__list {
+  margin-left: 1.5rem;
+  color: #fff7ef;
+  text-transform: uppercase;
+  font-weight: bold;
+  list-style: none;
+  display: inline-block;
+  align-self: center;
+  text-shadow: 2px 2px 4px black;
+}
+
+.nav__link {
+  margin-left: 1.5rem;
+  color: #fff7ef;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.nav__link:hover {
+  color: #f85d5a;
+  text-shadow: 2px 2px 4px #6f756b;
 }

@@ -1,7 +1,8 @@
 import React from "react";
 
 function CartWidget() {
-	return <>Compras 🛒</>;
+	return <>
+	<span>🛒</span></>;
 }
 
 export default CartWidget;

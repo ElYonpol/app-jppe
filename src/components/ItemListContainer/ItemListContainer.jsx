@@ -1,8 +1,8 @@
 import React from "react";
 
-function ItemListContainer() {
+function ItemListContainer(props) {
 	return (
-		<div>La Odontología puede solucionar tus problemas y dolores dentales</div>
+		<div className="display-1--description">{props.text}</div>
 	);
 }
 

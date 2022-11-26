@@ -9,18 +9,18 @@ import logo from "./icon_pe.jpg";
 function NavBar() {
 	return (
 		<>
-			<Navbar bg="light" expand="lg">
-				<Container>
-					<Navbar.Brand href="#home">
+			<Navbar expand="md navbar--row bs--navbar ">
+				<Container className="navbar--row">
+					<Navbar.Brand href="#">
 						<img className="image" src={logo} alt="Logo" />
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
-						<Nav className="me-auto">
-							<Nav.Link href="#home">Inicio</Nav.Link>
-							<Nav.Link href="#link">Profesionales</Nav.Link>
-							<NavDropdown title=<CartWidget /> id="basic-nav-dropdown">
-								<NavDropdown.Item href="#action/3.1">
+						<Nav className="me-auto nav__list">
+							<Nav.Link id="nav__list" href="#">Inicio</Nav.Link>
+							<Nav.Link id="nav__list" href="#">Profesionales</Nav.Link>
+							<NavDropdown id="nav__list" title=<CartWidget /> >
+								<NavDropdown.Item clasname="nav__link" href="#action/3.1">
 									Blanqueamiento
 								</NavDropdown.Item>
 								<NavDropdown.Divider />
