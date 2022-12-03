@@ -17,9 +17,13 @@ function NavBar() {
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto nav__list">
-							<Nav.Link id="nav__list" href="#">Inicio</Nav.Link>
-							<Nav.Link id="nav__list" href="#">Profesionales</Nav.Link>
-							<NavDropdown id="nav__list" title=<CartWidget /> >
+							<Nav.Link id="nav__list" href="#">
+								Inicio
+							</Nav.Link>
+							<Nav.Link id="nav__list" href="#">
+								Profesionales
+							</Nav.Link>
+							<NavDropdown id="nav__list" title=<CartWidget />>
 								<NavDropdown.Item clasname="nav__link" href="#action/3.1">
 									Blanqueamiento
 								</NavDropdown.Item>
@@ -40,7 +44,7 @@ function NavBar() {
 								<NavDropdown.Item href="#action/3.6">
 									Implante y Corona
 								</NavDropdown.Item>
-                                <NavDropdown.Divider />
+								<NavDropdown.Divider />
 								<NavDropdown.Item href="#action/3.7">
 									Placa Miorelajante
 								</NavDropdown.Item>
