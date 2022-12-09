@@ -1,34 +1,39 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import CartWidget from "../NavBar/CartWidget";
 
 function ItemCount(props) {
-	const { onHandInventory, defaultQty } = props;
+	const { onHandInventory } = props;
 
 	const MAX_ITEM_INVENTORY = onHandInventory;
 
-	const [counter, setCounter] = useState(defaultQty);
+	const [counter, setCounter] = useState(1);
 
-	const increaseQty = () => {
-		setCounter((counter) => Math.min(counter + 1, MAX_ITEM_INVENTORY));
-	};
+	function increaseQty() {
+		setCounter(Math.min(counter + 1, MAX_ITEM_INVENTORY));
+	}
 
-	const decreaseQty = () => {
-		setCounter((counter) => Math.max(0, counter - 1));
-	};
+	function decreaseQty() {
+		console.log(counter);
+		setCounter(Math.max(1, counter - 1));
+	}
 
 	return (
 		<>
-			<div>
-				<button onClick={increaseQty}>+</button>
-				<span>{counter}</span>
-				<button onClick={decreaseQty}>-</button>
+			<div className="display-1--subtitle">
+				<button onClick={increaseQty} className="button-cart">
+					+
+				</button>
+				<span className="display-1--description"> {counter} </span>
+				<button onClick={decreaseQty} className="button-cart">
+					-
+				</button>
 			</div>
-			<div>
-				<button>
-					Agregar al carrito <CartWidget />
+			<div className="display-1--subtitle">
+				<button className="button-cart">
+					Agregar <CartWidget />
 				</button>
 			</div>
 		</>
 	);
 }
-export default ItemCount
+export default ItemCount;

@@ -1,0 +1,110 @@
+/* Estructura GRID responsive de las tarjetas - COMPRAS*/
+
+.cartCards--container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-gap: 1rem;
+	justify-items: center;
+	padding: 2rem;
+}
+
+.cartCard {
+	display: flex;
+	flex-direction: row;
+	color: #fff7ef;
+	background-position: center center;
+	max-width: 280px;
+	height: 300px;
+	border-radius: 1rem;
+	overflow: hidden;
+	transition: transform 500ms ease;
+	box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+}
+.cartCard-content {
+	min-height: 230px;
+}
+.cartCard--1 {
+	background-image: url("../../assets/images/cartCard--1.webp");
+	background-size: cover;
+}
+.cartCard--2 {
+	background-image: url("../../assets/images/cartCard--2.webp");
+	background-size: cover;
+}
+.cartCard--3 {
+	background-image: url("../../assets/images/cartCard--3.webp");
+	background-size: cover;
+}
+.cartCard--4 {
+	background-image: url("../../assets/images/cartCard--4.webp");
+	background-size: cover;
+}
+.cartCard--5 {
+	background-image: url("../../assets/images/cartCard--5.webp");
+	background-size: cover;
+}
+.cartCard--6 {
+	background-image: url("../../assets/images/cartCard--6.webp");
+	background-size: cover;
+}
+.cartCard--7 {
+	background-image: url("../../assets/images/cartCard--7.webp");
+	background-size: cover;
+}
+
+.cartCard-content {
+	padding: 1rem;
+	background: linear-gradient(black, rgba(0, 0, 0, 0.5));
+	align-self: flex-end;
+	min-width: 280px;
+}
+.cartCard-content__title {
+	font-weight: 700;
+	text-decoration: none;
+	text-decoration-color: #fff7ef;
+	padding: 2px;
+}
+
+.cartCard .cartCard:hover,
+.cartCard:focus-within {
+	transform: scale(1.05);
+}
+
+.cartCard .cartCard-content__body {
+	color: #fff7ef;
+	font-size: 0.8rem;
+	padding: 6px;
+}
+
+/*consultar si el mecanismo de entrada primario del usuario
+puede hacer hover*/
+
+@media (hover) {
+	.cartCard-content {
+		transform: translateY(70%);
+		transition: transform 500ms ease;
+	}
+
+	.cartCard:hover .cartCard-content {
+		transform: translateY(0);
+		transition-delay: 500ms;
+	}
+}
+
+.button-cart,
+.button-cart__purchase {
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff7ef;
+	background-color: black;
+	padding: 0.2rem 1rem;
+	border-radius: 0.25rem;
+	transition: all 0.5s ease;
+}
+
+.button-cart:hover,
+.button-cart__purchase:hover {
+	background-color: #fff7ef;
+	color: black;
+}

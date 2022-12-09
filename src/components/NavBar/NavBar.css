@@ -1,0 +1,58 @@
+/*ESTILOS DEL HEADER y NAVBAR*/
+
+header {
+    position: sticky;
+	top: 0px;
+	width: 100%;
+	z-index: 1;
+}
+
+.bs--navbar {
+    background-image: url("../../assets/images/consultorio_header.webp");
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	width: 100%;
+	/*border: 1px solid black;*/
+}
+
+.col {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 5px;
+	/*border: 1px solid green;*/
+}
+
+.nav__list li {
+    font-size: 1.5rem;
+	margin-left: 1.5rem;
+	color: #fff7ef;
+	text-transform: uppercase;
+	font-weight: bold;
+	list-style: none;
+	display: inline-block;
+	align-self: center;
+	text-shadow: 2px 2px 4px black;
+	/*border: 1px solid blue;*/
+}
+
+.nav__link {
+	color: #f85d5a;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.nav__link:hover , .nav__list:hover {
+	color: #f88a02;
+	text-shadow: 2px 2px 4px black;
+}

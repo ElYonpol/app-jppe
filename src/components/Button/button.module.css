@@ -1,0 +1,19 @@
+.button-cart,
+.button-cart__purchase {
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff7ef;
+	background-color: black;
+	padding: 0.2rem 1rem;
+	border-radius: 0.25rem;
+	transition: all 0.5s ease;
+}
+
+.button-cart:hover,
+.button-cart:focus,
+.button-cart__purchase:hover,
+.button-cart__purchase:focus {
+	background-color: #fff7ef;
+	color: black;
+}
