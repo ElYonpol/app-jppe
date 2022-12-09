@@ -1,12 +1,13 @@
 import Item from "../Item/Item";
 import { Link } from "react-router-dom";
+import products from "../data/mockdata";
 
-export default function ItemList(props){
+export default function ItemList(products){
     return(
         <div>
-            {props.map((products) =>(
+            {props.map((product) =>{
 
-            ))}
+            }))}
         </div>
     )
 }

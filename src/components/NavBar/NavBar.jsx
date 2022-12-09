@@ -1,7 +1,6 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
-import logo from "../../assets/images/icon_pe.jpg";
+import logo from "../../assets/icons/icon_pe.jpg";
 import "./NavBar.css";
 
 export default function NavBar() {
