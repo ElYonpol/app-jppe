@@ -19,5 +19,4 @@ export default function ItemDetailContainer() {
 	}, [itemID]);
 
 	return <ItemDetail product={product} />;
-	//return <ItemDetail product={product} />;
 }
