@@ -38,16 +38,18 @@ function App() {
 								path="/category/:categoryID"
 								element={
 									<>
-										<h1>
-											<div className="display-1-intro">
-												Portas Esquivel & Asociados
+										<div className="col--main">
+											<h1>
+												<div className="display-1-intro">
+													Portas Esquivel & Asociados
+												</div>
+											</h1>
+											<div className="display-1--subtitle">
+												Servicios por Categoría
 											</div>
-										</h1>
-										<div className="display-1--subtitle">
-											Servicios por Categoría
-										</div>
-										<div className="cartCards--container">
-											<ItemListContainer />
+											<div className="cartCards--container">
+												<ItemListContainer />
+											</div>
 										</div>
 									</>
 								}
@@ -56,16 +58,18 @@ function App() {
 								path="/item/:itemID"
 								element={
 									<>
-										<h1>
-											<div className="display-1-intro">
-												Portas Esquivel & Asociados
+										<div className="col--main">
+											<h1>
+												<div className="display-1-intro">
+													Portas Esquivel & Asociados
+												</div>
+											</h1>
+											<div className="display-1--subtitle">
+												Detalle del servicio
 											</div>
-										</h1>
-										<div className="display-1--subtitle">
-											Detalle del servicio
-										</div>
-										<div className="cartCards--container">
-											<ItemDetailContainer />
+											<div className="cartCards--container">
+												<ItemDetailContainer />
+											</div>
 										</div>
 									</>
 								}
@@ -74,16 +78,18 @@ function App() {
 								path="/servicios"
 								element={
 									<>
-										<h1>
-											<div className="display-1-intro">
-												Portas Esquivel & Asociados
+										<div className="col--main">
+											<h1>
+												<div className="display-1-intro">
+													Portas Esquivel & Asociados
+												</div>
+											</h1>
+											<div className="display-1--subtitle">
+												Servicios Ofrecidos (2seg delay)
 											</div>
-										</h1>
-										<div className="display-1--subtitle">
-											Servicios Ofrecidos (2seg delay)
-										</div>
-										<div className="cartCards--container">
-											<ItemListContainer />
+											<div className="cartCards--container">
+												<ItemListContainer />
+											</div>
 										</div>
 									</>
 								}
