@@ -80,7 +80,7 @@ function App() {
 											</div>
 										</h1>
 										<div className="display-1--subtitle">
-											Servicios Ofrecidos
+											Servicios Ofrecidos (2seg delay)
 										</div>
 										<div className="cartCards--container">
 											<ItemListContainer />
