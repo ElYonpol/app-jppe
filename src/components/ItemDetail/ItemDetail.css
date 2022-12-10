@@ -41,6 +41,11 @@
 	background-size: cover;
 }
 
+.cartCard--error {
+	background-image: url("../../assets/images/cartCard--error.webp");
+	background-size: cover;
+}
+
 .cartCardDetail-content {
 	padding: 1rem;
 	background: linear-gradient(black, rgba(0, 0, 0, 0.5));

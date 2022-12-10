@@ -13,11 +13,11 @@ export default function ItemListContainer() {
 				.then((respuesta) => {
 					setProducts(respuesta);
 				})
-				.catch((error) => console.error("ItemListContainer Non Category error:",error));
+				.catch((error) => console.error("ItemListContainer getItems() error:",error));
 		} else {
 			getItemsCategory(categoryID)
 				.then((respuestaFiltrada) => setProducts(respuestaFiltrada))
-				.catch((errorMsg) => console.error("ItemListContainer Category error:",errorMsg));
+				.catch((errorMsg) => console.error("ItemListContainer getItemsCategory(categoryID) error:",errorMsg));
 		}
 	}, [categoryID]);
 

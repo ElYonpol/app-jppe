@@ -13,9 +13,10 @@ export default function ItemDetailContainer() {
 			.then((respuesta) => {
 				setProduct(respuesta);
 			})
-			.catch((error) =>
-				console.error("ItemDetailContainer Item no encontrado", error)
-			);
+			.catch((error) =>{
+				console.error("ItemDetailContainer getSingleItem(itemID) no encontrado.", error);
+				setProduct(error);
+			});
 	}, [itemID]);
 
 	return <ItemDetail product={product} />;
