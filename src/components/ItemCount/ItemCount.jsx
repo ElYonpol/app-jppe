@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CartWidget from "../NavBar/CartWidget";
+import "../ItemList/ItemList.css";
 
 function ItemCount(props) {
 	const { onHandInventory } = props;
@@ -26,11 +27,11 @@ function ItemCount(props) {
 				<button onClick={decreaseQty} className="button-cart">
 					-
 				</button>
-			</div>
-			<div className="display-1--subtitle">
+			<span className="display-1--subtitle">
 				<button className="button-cart">
 					Agregar <CartWidget />
 				</button>
+			</span>
 			</div>
 		</>
 	);

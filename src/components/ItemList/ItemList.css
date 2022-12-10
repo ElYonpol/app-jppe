@@ -100,6 +100,7 @@ puede hacer hover*/
 	color: #fff7ef;
 	background-color: black;
 	padding: 0.2rem 1rem;
+	margin: 4px;
 	border-radius: 0.25rem;
 	transition: all 0.5s ease;
 }

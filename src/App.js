@@ -44,9 +44,9 @@ function App() {
 											</div>
 										</h1>
 										<div className="display-1--subtitle">
-											Categoría
+											Servicios por Categoría
 										</div>
-										<div>
+										<div className="cartCards--container">
 											<ItemListContainer />
 										</div>
 									</>
@@ -64,7 +64,7 @@ function App() {
 										<div className="display-1--subtitle">
 											Detalle del servicio
 										</div>
-										<div>
+										<div className="cartCards--container">
 											<ItemDetailContainer />
 										</div>
 									</>
