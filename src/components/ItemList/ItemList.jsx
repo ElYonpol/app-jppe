@@ -9,6 +9,7 @@ export default function ItemList(props){
 				return (
 					<Item
 						key={item.id}
+                        id={item.id}
 						articulo={item.articulo}
 						categoria={item.categoria}
 						imagen={item.imagen}

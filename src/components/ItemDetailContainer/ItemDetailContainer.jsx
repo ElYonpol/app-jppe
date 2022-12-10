@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import getSingleItem from "../../services/mockDetailService";
+import { getSingleItem } from "../../services/mockService";
 
 export default function ItemDetailContainer() {
 	const [product, setProduct] = useState([]);
 
+	let { itemID } = useParams();
+
 	useEffect(() => {
-		getSingleItem().then((respuesta) => setProduct(respuesta));
+		getSingleItem(itemID)
+			.then((respuesta) => {
+				setProduct(respuesta);
+			})
+			.catch((error) => console.error("Item no encontrado"));
 	}, []);
 
-	return (
-		<ItemDetail product={product}/>
-	);
+	return <ItemDetail product={product} />;
 	//return <ItemDetail product={product} />;
 }

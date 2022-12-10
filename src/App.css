@@ -12,3 +12,25 @@
 	background-position: center bottom;
 	background-size: cover;
 }
+
+#header {
+	grid-area: header;
+}
+
+#main {
+	grid-area: main;
+}
+
+#footer {
+	grid-area: footer;
+}
+
+.grid--container {
+	display: grid;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+	grid-template-rows: auto auto auto;
+	height: 100vh;
+}

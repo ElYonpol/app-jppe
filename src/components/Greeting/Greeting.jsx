@@ -11,9 +11,6 @@ export default function Greeting() {
 	return (
 		<>
 			<div className="display-1--description">Hola {person}</div>
-			<h1>
-				<div className="display-1-intro">Portas Esquivel & Asociados</div>
-			</h1>
 			<div className="display-1--subtitle">Odontología de Excelencia</div>
 			<div className="display-1--description">
 				Brindamos soluciones integrales en estética dental, blanqueamiento,

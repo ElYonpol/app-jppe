@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import logo from "../../assets/icons/icon_pe.jpg";
 import "./NavBar.css";
@@ -8,17 +9,35 @@ export default function NavBar() {
 		<nav className="bs--navbar">
 			<div className="row">
 				<div className="col">
-					<img
-						className="image"
-						src={logo}
-						alt="Logo Portas Esquivel & Asociados"
-					/>
+					<Link to="/" className="nav__link">
+						<img
+							className="image"
+							src={logo}
+							alt="Logo Portas Esquivel & Asociados"
+						/>
+					</Link>
 				</div>
 				<div className="col">
 					<ul className="nav__list">
-						<li className="nav__link">Profesionales</li>
-						<li className="nav__link">
-							Servicios <CartWidget />
+						<li>
+							<Link to="/category/Estética" className="nav__link">
+								Estética
+							</Link>
+						</li>
+						<li>
+							<Link to="/category/Prótesis" className="nav__link">
+								Prótesis
+							</Link>
+						</li>
+						<li>
+							<Link to="/category/Rehabilitación" className="nav__link">
+								Rehabilitación
+							</Link>
+						</li>
+						<li>
+							<Link to="/servicios" className="nav__link">
+								Servicios <CartWidget />
+							</Link>
 						</li>
 					</ul>
 				</div>
