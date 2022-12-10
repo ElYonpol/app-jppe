@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import CartWidget from "../NavBar/CartWidget";
 import "../ItemList/ItemList.css";
 
+//Por ahora este componente es sólo para mostrar los símbolos + y - junto con la cantidad
+//que luego el usuario iría a comprar. El límite máximo de compra es el stock del producto
+
 function ItemCount(props) {
 	const { onHandInventory } = props;
 
@@ -27,11 +30,11 @@ function ItemCount(props) {
 				<button onClick={decreaseQty} className="button-cart">
 					-
 				</button>
-			<span className="display-1--subtitle">
-				<button className="button-cart">
-					Agregar <CartWidget />
-				</button>
-			</span>
+				<span className="display-1--subtitle">
+					<button className="button-cart">
+						Agregar <CartWidget />
+					</button>
+				</span>
 			</div>
 		</>
 	);
