@@ -3,9 +3,6 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
 export default function ItemDetail(props) {
-	console.log("props:", props);
-	console.log("props.product:", props.product);
-
 	if (props.product === "Item no encontrado") {
 		return (
 			<div className={`cartCardDetail cartCard--error`}>
