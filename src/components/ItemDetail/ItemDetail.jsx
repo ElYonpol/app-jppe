@@ -10,6 +10,7 @@ export default function ItemDetail(props) {
 				<p className="cartCardDetail-content__body">{props.product.body}</p>
 				<p className="cartCardDetail-content__title">${props.product.precio}</p>
 				<ItemCount onHandInventory={props.product.cantidad} />
+				<p className="cartCardDetail-content__body">{props.product.cantidad} unidades disponibles</p>
 			</div>
 		</div>
 	);

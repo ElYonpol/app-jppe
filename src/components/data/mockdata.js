@@ -63,7 +63,7 @@ const products = [
 		title: "Implante y Corona",
 		body: "La solución en implantes y coronas a cada caso que se presenta para poder disfrutar de una masticación adecuada.",
 		precio: 6000,
-		cantidad: 10,
+		cantidad: 9,
 	},
 	{
 		id: 7,
@@ -74,7 +74,7 @@ const products = [
 		title: "Placa Miorelajante",
 		body: "La solución en tratamientos activos de eliminación de los efectos del bruxismo.",
 		precio: 7000,
-		cantidad: 10,
+		cantidad: 3,
 	},
 ];
 
