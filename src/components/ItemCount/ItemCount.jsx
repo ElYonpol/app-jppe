@@ -13,7 +13,6 @@ function ItemCount(props) {
 	}
 
 	function decreaseQty() {
-		console.log(counter);
 		setCounter(Math.max(1, counter - 1));
 	}
 

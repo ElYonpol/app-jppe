@@ -9,7 +9,5 @@ export default function ItemListContainer() {
 		getItems().then((respuesta) => setProducts(respuesta));
 	}, []);
 
-	return (
-		<ItemList products={products} />
-	);
+	return <ItemList products={products} />;
 }
