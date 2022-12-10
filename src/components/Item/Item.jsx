@@ -1,6 +1,6 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import "../ItemListContainer/ItemListContainer.css";
+import "../ItemList/ItemList.css";
 
 export default function Item(props) {
 	return (

@@ -23,13 +23,42 @@ body {
 	border-radius: 4px;
 }
 
-.display-1--subtitle,
-.display-1--description {
-	font-size: 1.5rem;
+.display-1-intro {
+	color: #475681;
+	font-size: 2.5rem;
+	font-weight: 700;
+	text-shadow: 2px 2px 4px #fff7ef;
+	text-align: center;
+}
+
+.display-1--subtitle {
+	font-size: 2rem;
 	font-weight: 400;
 	text-shadow: 1px 1px 4px #fff7ef;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
 
+.display-1--description {
+	font-size: 1rem;
+	font-weight: 400;
+	text-shadow: 1px 1px 4px #fff7ef;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
 
+.row--main {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	padding: 5px;
+	row-gap: 10px;
+}
+
+.col--main {
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+	width: max(500px, 80%);
+}

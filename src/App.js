@@ -2,14 +2,13 @@ import React from "react";
 
 import "./App.css";
 import "./index.css";
-import "./components/ItemListContainer/ItemListContainer.css";
+import "./components/ItemList/ItemList.css";
 
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
 import Greeting from "./components/Greeting/Greeting";
 import Footer from "./components/Footer/Footer";
 
-//let URL = `https://635d78e707076ac24f3dbf4a.mockapi.io/productos`;
 
 function App() {
 	return (
@@ -17,11 +16,14 @@ function App() {
 			<div className="App">
 				<header className="App-header">
 					<NavBar />
-					<Greeting />
-					<div className="cartCards--container">
-						<ItemListContainer text="La Odontología puede solucionar tus problemas y dolores dentales" />
+					<div className="col--main">
+						<Greeting />
 					</div>
-				<Footer />
+					<div className="display-1--subtitle">Servicios Ofrecidos</div>
+					<div className="cartCards--container">
+						<ItemListContainer />
+					</div>
+					<Footer />
 				</header>
 			</div>
 		</>

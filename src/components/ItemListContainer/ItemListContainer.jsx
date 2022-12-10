@@ -1,25 +1,15 @@
-import React from "react";
-import Item from "../Item/Item";
-import "./ItemListContainer.css";
-import products from "../data/mockdata";
+import React, { useState, useEffect } from "react";
+import ItemList from "../ItemList/ItemList";
+import getItems from "../../services/mockService";
 
 export default function ItemListContainer() {
+	const [products, setProducts] = useState([]);
+
+	useEffect(() => {
+		getItems().then((respuesta) => setProducts(respuesta));
+	}, []);
+
 	return (
-		<>
-			{products.map((item) => {
-				return (
-					<Item
-						articulo={item.articulo}
-						categoria={item.categoria}
-						imagen={item.imagen}
-						claseCSS={item.claseCSS}
-						title={item.title}
-						body={item.body}
-						precio={item.precio}
-						cantidad={item.cantidad}
-					/>
-				);
-			})}
-		</>
+		<ItemList products={products} />
 	);
 }
