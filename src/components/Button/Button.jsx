@@ -1,6 +1,6 @@
 import React from "react";
 import CartWidget from "../NavBar/CartWidget";
-import "./button.module.css";
+import "./button.css";
 
 export default function Button() {
 	return (
