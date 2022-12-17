@@ -1,39 +1,53 @@
-import React, { useState } from "react";
-import CartWidget from "../NavBar/CartWidget";
+import React, { useState, useContext } from "react";
+import Button from "../Button/Button";
 import "../ItemList/ItemList.css";
+import { cartContext } from "../../storage/cartContext";
 
 //Por ahora este componente es sólo para mostrar los símbolos + y - junto con la cantidad
 //que luego el usuario iría a comprar. El límite máximo de compra es el stock del producto
 
 function ItemCount(props) {
-	const { onHandInventory } = props;
+	const { onHandInventory, onAddToCart, onRemoveItem } = props;
 
 	const MAX_ITEM_INVENTORY = onHandInventory;
 
-	const [counter, setCounter] = useState(1);
+	const [cartQty, setCartQty] = useState(1);
+
+	const { cart } = useContext(cartContext);
 
 	function increaseQty() {
-		setCounter(Math.min(counter + 1, MAX_ITEM_INVENTORY));
+		setCartQty(Math.min(cartQty + 1, MAX_ITEM_INVENTORY));
 	}
 
 	function decreaseQty() {
-		setCounter(Math.max(1, counter - 1));
+		setCartQty(Math.max(1, cartQty - 1));
 	}
 
 	return (
 		<>
 			<div className="display-1--subtitle">
-				<button onClick={increaseQty} className="button-cart">
+				<Button onButtonClick={increaseQty} className="button-cart">
 					+
-				</button>
-				<span className="display-1--description"> {counter} </span>
-				<button onClick={decreaseQty} className="button-cart">
+				</Button>
+				<span className="display-1--description"> {cartQty} </span>
+				<Button onButtonClick={decreaseQty} className="button-cart">
 					-
-				</button>
+				</Button>
 				<span className="display-1--subtitle">
-					<button className="button-cart">
-						Agregar <CartWidget />
-					</button>
+					<Button
+						onButtonClick={() => onAddToCart(cartQty)}
+						className="button-cart"
+					>
+						Agregar 🛒
+					</Button>
+				</span>
+				<span className="display-1--subtitle">
+					<Button
+						onButtonClick={() => onRemoveItem(cart)}
+						className="button-cart"
+					>
+						Quitar item 🗑
+					</Button>
 				</span>
 			</div>
 		</>

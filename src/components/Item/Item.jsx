@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ItemCount from "../ItemCount/ItemCount";
+import Button from "../Button/Button";
 import "../ItemList/ItemList.css";
 
 export default function Item(props) {
@@ -26,9 +26,8 @@ export default function Item(props) {
 						<p className="cartCard-content__title">
 							${props.precio.toLocaleString()}
 						</p>
-						<ItemCount onHandInventory={props.cantidad} />
 						<Link to={urlDetail}>
-							<button className="button-cart">Ver detalle</button>
+							<Button className="button-cart">Ver detalle</Button>
 						</Link>
 					</div>
 				</div>

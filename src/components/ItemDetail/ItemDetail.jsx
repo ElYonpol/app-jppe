@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
+import { cartContext } from "../../storage/cartContext";
 
 export default function ItemDetail(props) {
+	const [qtyInCart, setQtyInCart] = useState(0);
+
+	const { addToCart, removeItem } = useContext(cartContext);
+
 	if (props.product === "Item no encontrado") {
 		return (
 			<div className={`cartCardDetail cartCard--error`}>
@@ -13,6 +19,23 @@ export default function ItemDetail(props) {
 			</div>
 		);
 	} else {
+		function handleAddToCart(cartQty) {
+			setQtyInCart(cartQty);
+			addToCart(props.product, cartQty);
+
+			console.log(
+				"Se agregaron al carrito:",
+				cartQty,
+				"unidades de",
+				props.product.title
+			);
+		}
+
+		function handleRemoveItem(cart) {
+			console.log(cart);
+			removeItem(cart);
+		}
+
 		return (
 			<div className={`cartCardDetail ${props.product.claseCSS}`}>
 				<div className="cartCardDetail-content">
@@ -21,7 +44,14 @@ export default function ItemDetail(props) {
 					<p className="cartCardDetail-content__title">
 						${props.product.precio}
 					</p>
-					<ItemCount onHandInventory={props.product.cantidad} />
+					<ItemCount
+						onHandInventory={props.product.cantidad}
+						onAddToCart={handleAddToCart}
+						onRemoveItem={handleRemoveItem}
+					/>
+					<Link to="/cart" className="nav__link cartCardDetail-content__body">
+						Ir a 🛒
+					</Link>
 					<p className="cartCardDetail-content__body">
 						{props.product.cantidad} unidades disponibles
 					</p>

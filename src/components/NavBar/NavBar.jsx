@@ -36,7 +36,12 @@ export default function NavBar() {
 						</li>
 						<li>
 							<Link to="/servicios" className="nav__link">
-								Servicios <CartWidget />
+								Servicios
+							</Link>
+						</li>
+						<li>
+							<Link to="/cart" className="nav__link">
+								<CartWidget />
 							</Link>
 						</li>
 					</ul>

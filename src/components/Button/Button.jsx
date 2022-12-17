@@ -1,14 +1,13 @@
 import React from "react";
-import CartWidget from "../NavBar/CartWidget";
-import "./button.css";
+import "./Button.css";
 
-export default function Button() {
+export default function Button(props) {
 	return (
 		<button
+		onClick={props.onButtonClick}
 			className="button-cart"
-			title="Haga click para agregar 'Blanqueamiento' al carrito"
-		>
-			Agregar <CartWidget />
+			title={props.title}
+		>{props.children || props.text}
 		</button>
 	);
 }
