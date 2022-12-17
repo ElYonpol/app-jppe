@@ -12,9 +12,14 @@ function CartWidget() {
 
 	return (
 		<>
-			<span className="nav__link">🛒</span>
-			<span className="nav__link">{totalItemsInCart} / </span>
-			<span className="nav__link">{totalQtyInCart}</span>
+			<div>
+				<span className="nav__link">🛒</span>
+			</div>
+			<div className="cart__qty">
+				<span className="nav__list">{totalItemsInCart}</span>
+				<span> / </span>
+				<span className="nav__list">{totalQtyInCart}</span>
+			</div>
 		</>
 	);
 }

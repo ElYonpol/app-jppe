@@ -1,18 +1,18 @@
 /*ESTILOS DEL HEADER y NAVBAR*/
 
 header {
-    position: sticky;
+	position: sticky;
 	top: 0px;
 	width: 100%;
 	z-index: 1;
 }
 
 .bs--navbar {
-    background-image: url("../../assets/images/consultorio_header.webp");
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    border-radius: 4px;
+	background-image: url("../../assets/images/consultorio_header.webp");
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	border-radius: 4px;
 	position: sticky;
 	top: 0px;
 	width: 100%;
@@ -32,11 +32,13 @@ header {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	justify-items: center;
+	padding: 5px;
 	padding: 5px;
 }
 
 .nav__list li {
-    font-size: 1.5rem;
+	font-size: 1.5rem;
 	margin-left: 1.5rem;
 	color: #f88a02;
 	text-transform: uppercase;
@@ -53,7 +55,12 @@ header {
 	font-weight: bold;
 }
 
-.nav__link:hover , .nav__list:hover {
+.cart__qty {
+	font-size: 1rem;
+}
+
+.nav__link:hover,
+.nav__list:hover {
 	color: #f88a02;
 	text-shadow: 2px 2px 4px black;
 }
