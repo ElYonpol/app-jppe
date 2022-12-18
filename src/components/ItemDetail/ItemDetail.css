@@ -80,6 +80,7 @@
 	color: #fff7ef;
 	background-color: black;
 	padding: 0.2rem 1rem;
+	margin: 4px;
 	border-radius: 0.25rem;
 	transition: all 0.5s ease;
 }
@@ -88,4 +89,23 @@
 .button-cart__purchase:hover {
 	background-color: #fff7ef;
 	color: black;
+}
+
+.button-emptycart,
+.button-emptycart__purchase {
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff7ef;
+	background-color: rgb(133, 7, 7);
+	padding: 0.2rem 1rem;
+	margin: 4px;
+	border-radius: 0.25rem;
+	transition: all 0.5s ease;
+}
+
+.button-emptycart:hover,
+.button-emptycart__purchase:hover {
+	background-color: #fff7ef;
+	color: rgb(133, 7, 7);
 }

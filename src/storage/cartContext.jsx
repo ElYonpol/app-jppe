@@ -21,7 +21,7 @@ function CartContextProvider(props) {
 	}
 
 	function removeItem(cart) {
-		//Esto no funciona todavía
+		//Esta función no anda bien todavía
 		console.log("Cart Inicial", cart);
 		console.log(cart.articulo);
 
@@ -38,7 +38,7 @@ function CartContextProvider(props) {
 			setCart(newCart);
 			console.log("Cart Final", cart);
 		} else {
-			console.error("cartContext removeItem(item) Item no encontrado.");
+			console.error("cartContext removeItem(cart) Item no encontrado.");
 		}
 	}
 

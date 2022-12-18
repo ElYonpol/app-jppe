@@ -1,6 +1,5 @@
 import React from "react";
 import Item from "../Item/Item";
-import "./ItemList.css";
 
 export default function ItemList(props) {
 	if (Array.isArray(props.products)) {

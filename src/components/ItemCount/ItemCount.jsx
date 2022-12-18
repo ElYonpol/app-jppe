@@ -1,13 +1,13 @@
 import React, { useState, useContext } from "react";
 import Button from "../Button/Button";
-import "../ItemList/ItemList.css";
+import "../ItemDetail/ItemDetail.css";
 import { cartContext } from "../../storage/cartContext";
 
 //Por ahora este componente es sólo para mostrar los símbolos + y - junto con la cantidad
 //que luego el usuario iría a comprar. El límite máximo de compra es el stock del producto
 
 function ItemCount(props) {
-	const { onHandInventory, onAddToCart, onRemoveItem } = props;
+	const { onHandInventory, onAddToCart, onRemoveItem, onEmptyCart } = props;
 
 	const MAX_ITEM_INVENTORY = onHandInventory;
 
@@ -33,20 +33,30 @@ function ItemCount(props) {
 				<Button onButtonClick={decreaseQty} className="button-cart">
 					-
 				</Button>
-				<span className="display-1--subtitle">
+			</div>
+			<div className="display-1--subtitle">
+				<span>
 					<Button
 						onButtonClick={() => onAddToCart(cartQty)}
 						className="button-cart"
 					>
-						Agregar 🛒
+						Agregar item 🛒
 					</Button>
 				</span>
-				<span className="display-1--subtitle">
+				<span>
 					<Button
 						onButtonClick={() => onRemoveItem(cart)}
 						className="button-cart"
 					>
 						Quitar item 🗑
+					</Button>
+				</span>
+				<span>
+					<Button
+						onButtonClick={() => onEmptyCart(cart)}
+						className="button-emptycart"
+					>
+						Vaciar carrito 🛒
 					</Button>
 				</span>
 			</div>
