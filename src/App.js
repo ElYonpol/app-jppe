@@ -21,8 +21,7 @@ function App() {
 				<BrowserRouter>
 					<div className="App grid--container">
 						<NavBar />
-						<div id="main">
-
+						<section id="main">
 						<Routes>
 							<Route
 								path="/"
@@ -132,7 +131,7 @@ function App() {
 								}
 							/>
 						</Routes>
-						</div>
+						</section>
 						<Footer />
 					</div>
 				</BrowserRouter>
