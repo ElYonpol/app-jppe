@@ -1,0 +1,19 @@
+#divCartTable {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-width: 425px;
+}
+
+.userCart {
+	width: 100%;
+}
+
+.userCart__td {
+	padding: 10px;
+}
+
+.userCart__td-title {
+	text-align: left;
+    padding: 10px;
+}
