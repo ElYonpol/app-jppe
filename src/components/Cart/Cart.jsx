@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { cartContext } from "../../storage/cartContext";
 
 export default function Cart(props) {
-    console.log(props.key)
+	console.log(props.key);
 	return (
 		<>
 			<tr>
@@ -25,7 +25,7 @@ export default function Cart(props) {
 }
 
 export function CartTotal() {
-    const valueContext = useContext(cartContext);
+	const valueContext = useContext(cartContext);
 
 	const totalValueInCart = valueContext.totalValueInCartfn();
 
