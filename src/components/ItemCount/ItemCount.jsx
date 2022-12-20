@@ -7,7 +7,7 @@ import { cartContext } from "../../storage/cartContext";
 //que luego el usuario iría a comprar. El límite máximo de compra es el stock del producto
 
 function ItemCount(props) {
-	const { onHandInventory, onAddToCart, onRemoveItem, onEmptyCart } = props;
+	const { onHandInventory, onAddToCart, onRemoveItem, onEmptyCart, itemShownOnScreen } = props;
 
 	const MAX_ITEM_INVENTORY = onHandInventory;
 
@@ -45,7 +45,7 @@ function ItemCount(props) {
 				</span>
 				<span>
 					<Button
-						onButtonClick={() => onRemoveItem(cart)}
+						onButtonClick={() => onRemoveItem(itemShownOnScreen)}
 						className="button-cart"
 					>
 						Quitar item 🗑

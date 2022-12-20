@@ -20,25 +20,20 @@ function CartContextProvider(props) {
 		}
 	}
 
-	function removeItem(cart) {
-		//Esta función no anda bien todavía
-		console.log("Cart Inicial", cart);
-		console.log(cart.articulo);
-
-		let indexItemInCart = cart.find(
-			(itemInContext) => itemInContext.articulo === cart.articulo
+	function removeItem(itemShownOnScreen) {
+		let itemInCartID = cart.findIndex(
+			(itemInContext) => itemInContext.id === itemShownOnScreen
 		);
-
-		console.log("Indice del item", indexItemInCart);
 
 		const newCart = [...cart];
 
-		if (indexItemInCart !== -1) {
-			newCart.splice(indexItemInCart, 1);
+		if (itemInCartID !== -1) {
+			newCart.splice(itemInCartID, 1);
 			setCart(newCart);
-			console.log("Cart Final", cart);
 		} else {
-			console.error("cartContext removeItem(cart) Item no encontrado.");
+			console.error(
+				"cartContext removeItem(cart) Item no encontrado en el carrito."
+			);
 		}
 	}
 

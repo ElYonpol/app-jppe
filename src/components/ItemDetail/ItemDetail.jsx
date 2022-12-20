@@ -7,7 +7,7 @@ import { cartContext } from "../../storage/cartContext";
 export default function ItemDetail(props) {
 	const [qtyInCart, setQtyInCart] = useState(0);
 
-	const { addToCart, removeItem, emptyCart } = useContext(cartContext);
+	const { addToCart, removeItem, emptyCart, cart } = useContext(cartContext);
 
 	if (props.product === "Item no encontrado") {
 		return (
@@ -31,13 +31,11 @@ export default function ItemDetail(props) {
 			);
 		}
 
-		function handleRemoveItem(cart) {
-			console.log(cart);
-			removeItem(cart);
+		function handleRemoveItem(itemShownOnScreen) {
+			removeItem(itemShownOnScreen);
 		}
 
 		function handleEmptyCart(cart) {
-			console.log(cart);
 			emptyCart(cart);
 		}
 
@@ -51,6 +49,7 @@ export default function ItemDetail(props) {
 					</p>
 					<ItemCount
 						onHandInventory={props.product.cantidad}
+						itemShownOnScreen={props.product.id}
 						onAddToCart={handleAddToCart}
 						onRemoveItem={handleRemoveItem}
 						onEmptyCart={handleEmptyCart}
