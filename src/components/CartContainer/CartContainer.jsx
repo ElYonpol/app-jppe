@@ -22,7 +22,6 @@ export default function CartContainer() {
 							cantidad={item.cantidad}
 							cartQty={item.cartQty}
 						/>
-						
 					</>
 				);
 			})}

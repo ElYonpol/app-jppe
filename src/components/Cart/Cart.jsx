@@ -4,11 +4,12 @@ import { useContext } from "react";
 import { cartContext } from "../../storage/cartContext";
 
 export default function Cart(props) {
+    console.log(props.key)
 	return (
 		<>
 			<tr>
 				<th scope="row" className="userCart__td-title">
-					{props.title}
+					{props.key}-{props.title}
 				</th>
 				<td className="userCart__td">
 					{props.precio.toLocaleString("locale", {
