@@ -9,7 +9,6 @@ export default function ItemListContainer() {
 	const { categoryID } = useParams();
 
 	const miContexto = useContext(cartContext);
-	console.log(cartContext);
 
 	useEffect(() => {
 		if (categoryID === undefined) {

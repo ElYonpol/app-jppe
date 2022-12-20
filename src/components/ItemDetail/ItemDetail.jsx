@@ -7,7 +7,7 @@ import { cartContext } from "../../storage/cartContext";
 export default function ItemDetail(props) {
 	const [qtyInCart, setQtyInCart] = useState(0);
 
-	const { addToCart, removeItem, emptyCart, cart } = useContext(cartContext);
+	const { addToCart, removeItem, emptyCart } = useContext(cartContext);
 
 	if (props.product === "Item no encontrado") {
 		return (
