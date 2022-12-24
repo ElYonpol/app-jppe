@@ -4,6 +4,9 @@ import { cartContext } from "../../storage/cartContext";
 
 export default function Cart(props) {
 	console.log(props.key);
+
+	let unidOunids = props.cartQty > 1 ? "unids" : "unid";
+
 	return (
 		<>
 			<div className="purchaseCard">
@@ -15,7 +18,7 @@ export default function Cart(props) {
 					<div className="purchaseCard-content__priceQty">
 						<span>
 							Total ${(props.precio * props.cartQty).toLocaleString()} -{" "}
-							{props.cartQty.toLocaleString()} unids
+							{props.cartQty.toLocaleString()} {unidOunids}
 						</span>
 					</div>
 				</div>
@@ -31,6 +34,8 @@ export function CartTotal() {
 
 	const totalQtyInCart = valueContext.totalQtyInCartfn();
 
+	let unidOunids = totalQtyInCart > 1 ? "unids" : "unid";
+
 	return (
 		<>
 			<div className="purchaseCard purchaseCard--Total">
@@ -38,7 +43,7 @@ export function CartTotal() {
 					<div className="purchaseCard-content__priceQty">
 						<span>
 							Total Compra ${totalValueInCart.toLocaleString()} -{" "}
-							{totalQtyInCart.toLocaleString()} unids
+							{totalQtyInCart.toLocaleString()} {unidOunids}
 						</span>
 					</div>
 				</div>
