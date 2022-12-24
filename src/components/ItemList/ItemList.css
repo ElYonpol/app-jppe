@@ -1,4 +1,4 @@
-/* Estructura GRID responsive de las tarjetas - COMPRAS*/
+/* Estructura GRID responsive de las tarjetas - SERVICIOS*/
 
 .cartCards--container {
 	display: grid;
@@ -59,6 +59,7 @@
 	min-width: 280px;
 	min-height: 230px;
 }
+
 .cartCard-content__title {
 	font-weight: 700;
 	text-decoration: none;
@@ -71,8 +72,7 @@
 	transform: scale(1.05);
 }
 
-.cartCard .cartCard-content__body {
-	color: #fff7ef;
+.cartCard-content__body {
 	font-size: 0.8rem;
 	padding: 6px;
 }

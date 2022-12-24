@@ -113,26 +113,9 @@ function App() {
 												<div className="display-1--subtitle">
 													Carrito de compras
 												</div>
-												<div id="divCartTable">
-													<table id="cartTable">
-														<thead>
-															<tr>
-																<th scope="col" className="userCart__td-title">
-																	Servicio
-																</th>
-																<th scope="col" className="userCart__td">
-																	Precio
-																</th>
-																<th scope="col" className="userCart__td">
-																	Cantidad
-																</th>
-															</tr>
-														</thead>
-														<tbody className="userCart">
-															<CartContainer />
-															<CartTotal />
-														</tbody>
-													</table>
+												<div className="purchaseCards--container">
+													<CartTotal />
+													<CartContainer />
 												</div>
 											</div>
 										</>
