@@ -1,8 +1,11 @@
 import React, { useContext } from "react";
+import Button from "../Button/Button";
 import "./Cart.css";
 import { cartContext } from "../../storage/cartContext";
 
 export default function Cart(props) {
+	const { removeItem } = useContext(cartContext);
+	
 	let unidOunids = props.cartQty > 1 ? "unids" : "unid";
 
 	return (
@@ -18,6 +21,8 @@ export default function Cart(props) {
 							Total ${(props.precio * props.cartQty).toLocaleString()} -{" "}
 							{props.cartQty.toLocaleString()} {unidOunids}
 						</span>
+						<Button onButtonClick={() => removeItem(props.id)}
+						className="button-cart">X</Button>
 					</div>
 				</div>
 			</div>
