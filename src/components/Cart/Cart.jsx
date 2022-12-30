@@ -36,16 +36,18 @@ export function CartTotal() {
 
 	return (
 		<>
-			<div className="purchaseCard purchaseCard--Total">
-				<div>
-					<div className="purchaseCard-content__priceQty">
-						<span>
-							Total Compra ${totalValueInCart.toLocaleString()} -{" "}
-							{totalQtyInCart.toLocaleString()} {unidOunids}
-						</span>
+			{totalQtyInCart > 0 && (
+				<div className="purchaseCard purchaseCard--Total">
+					<div>
+						<div className="purchaseCard-content__priceQty">
+							<span>
+								Total Compra ${totalValueInCart.toLocaleString()} -{" "}
+								{totalQtyInCart.toLocaleString()} {unidOunids}
+							</span>
+						</div>
 					</div>
 				</div>
-			</div>
+			)}
 		</>
 	);
 }

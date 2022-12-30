@@ -2,6 +2,7 @@ import React, { useState, useEffect /* useContext */ } from "react";
 import { useParams } from "react-router-dom";
 /* import { cartContext } from "../../storage/cartContext"; */
 import ItemList from "../ItemList/ItemList";
+import Loader from "../Loader/Loader";
 import getItems, { getItemsCategory } from "../../services/mockService";
 
 export default function ItemListContainer() {
@@ -43,7 +44,5 @@ export default function ItemListContainer() {
 		}
 	}, [categoryID]);
 
-	return (
-		<>{isLoading ? <h3>Cargando...</h3> : <ItemList products={products} />}</>
-	);
+	return <>{isLoading ? <Loader /> : <ItemList products={products} />}</>;
 }

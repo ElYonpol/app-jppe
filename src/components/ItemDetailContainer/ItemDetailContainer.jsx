@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import Loader from "../Loader/Loader";
 import { getSingleItem } from "../../services/mockService";
 
 export default function ItemDetailContainer() {
@@ -27,7 +28,7 @@ export default function ItemDetailContainer() {
 
 	return (
 		<>
-			{isLoading ? <h3>Cargando...</h3> : <ItemDetail product={product} />}
+			{isLoading ? <Loader /> : <ItemDetail product={product} />}
 		</>
 	);
 }
