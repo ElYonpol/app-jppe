@@ -10,7 +10,7 @@ export default function Cart(props) {
 			<div className="purchaseCard">
 				<div className={`purchaseCard__image ${props.claseCSS}`}></div>
 				<div className="purchaseCard-content">
-					<p className="purchaseCard-content__title">{props.categoria}</p>
+					<p className="purchaseCard-content__category">{props.categoria}</p>
 					<p className="purchaseCard-content__title">{props.title}</p>
 					<p className="purchaseCard-content__body">{props.body}</p>
 					<div className="purchaseCard-content__priceQty">

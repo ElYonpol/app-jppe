@@ -14,7 +14,7 @@ export default function ItemDetail(props) {
 			<div className="cartCardDetail">
 				<div className={`cartCardDetail__image cartCard--error`}></div>
 				<div className="cartCardDetail-content">
-					<p className="cartCardDetail-content__title">Error</p>
+					<p className="cartCardDetail-content__category">Error</p>
 					<p className="cartCardDetail-content__title">Producto inexistente</p>
 					<p className="cartCardDetail-content__body">
 						El producto o servicio buscado no existe en la base de datos.
@@ -52,7 +52,7 @@ export default function ItemDetail(props) {
 						className={`cartCardDetail__image ${props.product.claseCSS}`}
 					></div>
 					<div className="cartCardDetail-content">
-						<p className="cartCardDetail-content__title">
+						<p className="cartCardDetail-content__category">
 							{props.product.categoria}
 						</p>
 						<p className="cartCardDetail-content__title">

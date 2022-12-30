@@ -46,6 +46,13 @@
 	padding: 2px 0 2px 0;
 }
 
+.cartCardDetail-content__category {
+	color: #f88a02;
+	font-weight: 700;
+	text-decoration: none;
+	padding: 2px 0 2px 0;
+}
+
 .cartCardDetail-content__body {
 	font-size: 0.8rem;
 	padding: 20px 0 20px 0;

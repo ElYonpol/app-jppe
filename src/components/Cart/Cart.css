@@ -2,7 +2,7 @@
 
 .purchaseCards--container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(660px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(1320px, 1fr));
 	grid-gap: 1rem;
 	justify-items: center;
 	padding: 2rem;
@@ -41,6 +41,13 @@
 }
 
 .purchaseCard-content__title {
+	font-weight: 700;
+	text-decoration: none;
+	padding: 2px 0 2px 0;
+}
+
+.purchaseCard-content__category {
+	color: #f88a02;
 	font-weight: 700;
 	text-decoration: none;
 	padding: 2px 0 2px 0;
