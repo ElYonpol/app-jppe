@@ -10,6 +10,8 @@ export default function ItemDetail(props) {
 
 	const { addToCart, removeItem, emptyCart } = useContext(cartContext);
 
+	let urlCategoryDetail = `/category/${props.product.categoria}`;
+
 	if (props.product === "Item no encontrado") {
 		return (
 			<div className="cartCardDetail">
@@ -53,9 +55,11 @@ export default function ItemDetail(props) {
 						className={`cartCardDetail__image ${props.product.claseCSS}`}
 					></div>
 					<div className="cartCardDetail-content">
-						<p className="cartCardDetail-content__category">
+					<Link className="nav__link" to={urlCategoryDetail}>
+					<span className="cartCardDetail-content__category">
 							{props.product.categoria}
-						</p>
+						</span>
+				</Link>
 						<p className="cartCardDetail-content__title">
 							{props.product.title}
 						</p>
