@@ -20,7 +20,7 @@ export default function Item(props) {
 			<>
 				<div className={`cartCard ${props.claseCSS}`}>
 					<div className="cartCard-content">
-						<p className="cartCard-content__title">{props.categoria}</p>
+						<p className="cartCard-content__category">{props.categoria}</p>
 						<p className="cartCard-content__title">{props.title}</p>
 						<p className="cartCard-content__body">{props.body}</p>
 						<p className="cartCard-content__title">

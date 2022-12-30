@@ -67,6 +67,14 @@
 	padding: 2px;
 }
 
+.cartCard-content__category {
+	color: #f88a02;
+	font-weight: 700;
+	text-decoration: none;
+	text-decoration-color: #fff7ef;
+	padding: 2px;
+}
+
 .cartCard .cartCard:hover,
 .cartCard:focus-within {
 	transform: scale(1.05);
