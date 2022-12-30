@@ -17,10 +17,11 @@ export default function ItemDetailContainer() {
 			})
 			.catch((error) => {
 				console.error(
-					"ItemDetailContainer getSingleItem(itemID) Item no encontrado.",
+					"Error en ItemDetailContainer.jsx función getSingleItem(itemID) Item no encontrado.",
 					error
 				);
 				setProduct(error);
+				setIsLoading(false);
 			});
 	}, [itemID]);
 

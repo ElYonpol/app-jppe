@@ -19,9 +19,13 @@ export default function ItemListContainer() {
 					setProducts(respuesta);
 					setIsLoading(false);
 				})
-				.catch((error) =>
-					console.error("ItemListContainer getItems() error:", error)
-				);
+				.catch((error) => {
+					console.error(
+						"Error en ItemListContainer.jsx función getItems():",
+						error
+					);
+					setIsLoading(false);
+				});
 		} else {
 			getItemsCategory(categoryID)
 				.then((respuestaFiltrada) => {
@@ -30,10 +34,11 @@ export default function ItemListContainer() {
 				})
 				.catch((errorMsg) => {
 					console.error(
-						"ItemListContainer getItemsCategory(categoryID) error:",
+						"Error en ItemListContainer.jsx función getItemsCategory(categoryID):",
 						errorMsg
 					);
 					setProducts(errorMsg);
+					setIsLoading(false);
 				});
 		}
 	}, [categoryID]);
