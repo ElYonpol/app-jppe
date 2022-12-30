@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
+import Button from "../Button/Button";
 import "./ItemDetail.css";
 import { cartContext } from "../../storage/cartContext";
 
@@ -74,11 +75,8 @@ export default function ItemDetail(props) {
 						</span>{" "}
 						--{" "}
 						<span>
-							<Link
-								to="/cart"
-								className="nav__link cartCardDetail-content__title"
-							>
-								Ver 🛒
+							<Link to="/cart">
+								<Button className="button-cart">Ver 🛒</Button>
 							</Link>
 						</span>
 					</div>

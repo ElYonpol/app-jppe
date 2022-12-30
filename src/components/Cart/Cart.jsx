@@ -8,11 +8,14 @@ export default function Cart(props) {
 	const { removeItem } = useContext(cartContext);
 
 	let unidOunids = props.cartQty > 1 ? "unids" : "unid";
+	let urlDetail = `/item/${props.id}`;
 
 	return (
 		<>
 			<div className="purchaseCard">
-				<div className={`purchaseCard__image ${props.claseCSS}`}></div>
+				<Link to={urlDetail}>
+					<div className={`purchaseCard__image ${props.claseCSS}`}></div>
+				</Link>
 				<div className="purchaseCard-content">
 					<p className="purchaseCard-content__category">{props.categoria}</p>
 					<p className="purchaseCard-content__title">{props.title}</p>
