@@ -66,10 +66,13 @@
 }
 
 .purchaseCard--Total {
+	font-size: 1.5rem;
+	font-weight: 700;
 	color: #fff7ef;
 	background-color: #6f756b;
 	width: 660px;
 	height: auto;
 	padding: 10px;
+	border-radius: 10px;
 	justify-content: flex-end;
 }

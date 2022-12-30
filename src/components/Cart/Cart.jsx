@@ -59,7 +59,7 @@ export function CartTotal() {
 		<>
 			<div className="purchaseCard purchaseCard--Total">
 				<div>
-					<div className="purchaseCard-content__priceQty">
+					<div>
 						<span>
 							Total Compra ${totalValueInCart.toLocaleString()} -{" "}
 							{totalQtyInCart.toLocaleString()} {unidOunids}

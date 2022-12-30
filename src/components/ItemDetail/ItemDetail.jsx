@@ -72,13 +72,13 @@ export default function ItemDetail(props) {
 						<span className="cartCardDetail-content__title">
 							{props.product.cantidad} unidades disponibles
 						</span>{" "}
-						-{" "}
+						--{" "}
 						<span>
 							<Link
 								to="/cart"
 								className="nav__link cartCardDetail-content__title"
 							>
-								Ir a 🛒
+								Ver 🛒
 							</Link>
 						</span>
 					</div>
