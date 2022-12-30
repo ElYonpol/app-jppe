@@ -3,8 +3,6 @@ import "./Cart.css";
 import { cartContext } from "../../storage/cartContext";
 
 export default function Cart(props) {
-	console.log(props.key);
-
 	let unidOunids = props.cartQty > 1 ? "unids" : "unid";
 
 	return (

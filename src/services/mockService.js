@@ -12,16 +12,17 @@ export default function getItems() {
 
 export function getItemsCategory(categoryID) {
 	return new Promise((resolve, reject) => {
-		let itemsFound = products.filter((item) => {
-			return item.categoria === categoryID;
-		});
+		setTimeout(() => {
+			let itemsFound = products.filter((item) => {
+				return item.categoria === categoryID;
+			});
 
-		if (itemsFound.length >0){
-			resolve(itemsFound);
-		} else {
-			reject("No hay productos para esa categoría.")
-		}
-		
+			if (itemsFound.length > 0) {
+				resolve(itemsFound);
+			} else {
+				reject("No hay productos para esa categoría.");
+			}
+		}, 1000);
 	});
 }
 
@@ -36,6 +37,6 @@ export function getSingleItem(itemID) {
 			} else {
 				reject("Item no encontrado");
 			}
-		}, 500);
+		}, 1000);
 	});
 }

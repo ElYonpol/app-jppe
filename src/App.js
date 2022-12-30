@@ -73,7 +73,7 @@ function App() {
 												<div className="display-1--subtitle">
 													Detalle del servicio
 												</div>
-												<div className="cartCards--container">
+												<div className="cartCardDetail--container">
 													<ItemDetailContainer />
 												</div>
 											</div>
@@ -91,7 +91,7 @@ function App() {
 													</div>
 												</h1>
 												<div className="display-1--subtitle">
-													Servicios Ofrecidos (2seg delay)
+													Servicios Ofrecidos
 												</div>
 												<div className="cartCards--container">
 													<ItemListContainer />

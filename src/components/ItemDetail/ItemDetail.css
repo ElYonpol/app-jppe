@@ -1,75 +1,75 @@
+/* Estructura GRID responsive de la tarjeta detalle */
+
+.cartCardDetail--container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(660px, 1fr));
+	grid-gap: 1rem;
+	justify-items: center;
+	padding: 1rem;
+	width: max(660px, 80%);
+}
+
 .cartCardDetail {
 	display: flex;
 	flex-direction: row;
 	color: #fff7ef;
-	background-position: center center;
-	max-width: 500px;
-	height: 600px;
-	border-radius: 1rem;
-	overflow: hidden;
-	transition: transform 500ms ease;
+	background-color: #6f756b;
+	width: 720px;
+	height: 380px;
+	border-radius: 20px;
 	box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-	margin: 10px
+	margin: 10px;
+	padding: 20px;
+	justify-content: space-between;
 }
 
-.cartCard--1 {
-	background-image: url("../../assets/images/cartCard--1.webp");
-	background-size: cover;
+.cartCardDetail-content {
+	border-radius: 10px;
+	width: 340px;
+	height: 360px;
+	padding: 0px 10px 0px 10px;
+	text-align: left;
 }
-.cartCard--2 {
-	background-image: url("../../assets/images/cartCard--2.webp");
-	background-size: cover;
+
+.cartCardDetail__image {
+	width: 340px;
+	height: 340px;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 10px;
+	background-position: center center;
 }
-.cartCard--3 {
-	background-image: url("../../assets/images/cartCard--3.webp");
-	background-size: cover;
+
+.cartCardDetail-content__title {
+	font-weight: 700;
+	text-decoration: none;
+	padding: 2px 0 2px 0;
 }
-.cartCard--4 {
-	background-image: url("../../assets/images/cartCard--4.webp");
-	background-size: cover;
+
+.cartCardDetail-content__body {
+	font-size: 0.8rem;
+	padding: 20px 0 20px 0;
 }
-.cartCard--5 {
-	background-image: url("../../assets/images/cartCard--5.webp");
-	background-size: cover;
+
+.cartCardDetail-content__priceQty {
+	font-size: 1.5rem;
+	font-weight: 700;
+	padding: 5px 0 5px 0;
+	text-align: right;
 }
-.cartCard--6 {
-	background-image: url("../../assets/images/cartCard--6.webp");
-	background-size: cover;
-}
-.cartCard--7 {
-	background-image: url("../../assets/images/cartCard--7.webp");
-	background-size: cover;
+
+.cartCardDetail--Total {
+	color: #fff7ef;
+	background-color: #6f756b;
+	width: 660px;
+	height: auto;
+	padding: 10px;
+	justify-content: flex-end;
 }
 
 .cartCard--error {
 	background-image: url("../../assets/images/cartCard--error.webp");
 	background-size: cover;
-}
-
-.cartCardDetail-content {
-	padding: 1rem;
-	background: linear-gradient(black, rgba(0, 0, 0, 0.5));
-	align-self: flex-end;
-	min-width: 500px;
-    min-height: 230px;
-}
-.cartCardDetail-content__title {
-	font-size: 2rem;
-    font-weight: 700;
-	text-decoration: none;
-	text-decoration-color: #fff7ef;
-	padding: 2px;
-}
-
-.cartCardDetail .cartCardDetail:hover,
-.cartCardDetail:focus-within {
-	transform: scale(1.05);
-}
-
-.cartCardDetail .cartCardDetail-content__body {
-	color: #fff7ef;
-	font-size: 1.5rem;
-	padding: 6px;
 }
 
 .button-cart,

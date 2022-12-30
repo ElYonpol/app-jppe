@@ -11,10 +11,14 @@ export default function ItemDetail(props) {
 
 	if (props.product === "Item no encontrado") {
 		return (
-			<div className={`cartCardDetail cartCard--error`}>
+			<div className="cartCardDetail">
+				<div className={`cartCardDetail__image cartCard--error`}></div>
 				<div className="cartCardDetail-content">
 					<p className="cartCardDetail-content__title">Error</p>
-					<p className="cartCardDetail-content__body">Producto inexistente</p>
+					<p className="cartCardDetail-content__title">Producto inexistente</p>
+					<p className="cartCardDetail-content__body">
+						El producto o servicio buscado no existe en la base de datos.
+					</p>
 				</div>
 			</div>
 		);
@@ -27,7 +31,9 @@ export default function ItemDetail(props) {
 				"Se agregaron al carrito:",
 				cartQty,
 				"unidades de",
-				props.product.title
+				props.product.title,
+				" Total:",
+				qtyInCart
 			);
 		}
 
@@ -40,28 +46,44 @@ export default function ItemDetail(props) {
 		}
 
 		return (
-			<div className={`cartCardDetail ${props.product.claseCSS}`}>
-				<div className="cartCardDetail-content">
-					<p className="cartCardDetail-content__title">{props.product.title}</p>
-					<p className="cartCardDetail-content__body">{props.product.body}</p>
-					<p className="cartCardDetail-content__title">
-						${props.product.precio}
-					</p>
-					<ItemCount
-						onHandInventory={props.product.cantidad}
-						itemShownOnScreen={props.product.id}
-						onAddToCart={handleAddToCart}
-						onRemoveItem={handleRemoveItem}
-						onEmptyCart={handleEmptyCart}
-					/>
-					<Link to="/cart" className="nav__link cartCardDetail-content__body">
-						Ir a 🛒
-					</Link>
-					<p className="cartCardDetail-content__body">
-						{props.product.cantidad} unidades disponibles
-					</p>
+			<>
+				<div className="cartCardDetail">
+					<div
+						className={`cartCardDetail__image ${props.product.claseCSS}`}
+					></div>
+					<div className="cartCardDetail-content">
+						<p className="cartCardDetail-content__title">
+							{props.product.categoria}
+						</p>
+						<p className="cartCardDetail-content__title">
+							{props.product.title}
+						</p>
+						<p className="cartCardDetail-content__body">{props.product.body}</p>
+						<div className="cartCardDetail-content__priceQty">
+							<span>${props.product.precio}</span>
+						</div>
+						<ItemCount
+							onHandInventory={props.product.cantidad}
+							itemShownOnScreen={props.product.id}
+							onAddToCart={handleAddToCart}
+							onRemoveItem={handleRemoveItem}
+							onEmptyCart={handleEmptyCart}
+						/>
+						<span className="cartCardDetail-content__title">
+							{props.product.cantidad} unidades disponibles
+						</span>{" "}
+						-{" "}
+						<span>
+							<Link
+								to="/cart"
+								className="nav__link cartCardDetail-content__title"
+							>
+								Ir a 🛒
+							</Link>
+						</span>
+					</div>
 				</div>
-			</div>
+			</>
 		);
 	}
 }

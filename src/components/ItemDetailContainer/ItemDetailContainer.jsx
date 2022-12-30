@@ -5,6 +5,7 @@ import { getSingleItem } from "../../services/mockService";
 
 export default function ItemDetailContainer() {
 	const [product, setProduct] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
 
 	let { itemID } = useParams();
 
@@ -12,6 +13,7 @@ export default function ItemDetailContainer() {
 		getSingleItem(itemID)
 			.then((respuesta) => {
 				setProduct(respuesta);
+				setIsLoading(false);
 			})
 			.catch((error) => {
 				console.error(
@@ -22,5 +24,9 @@ export default function ItemDetailContainer() {
 			});
 	}, [itemID]);
 
-	return <ItemDetail product={product} />;
+	return (
+		<>
+			{isLoading ? <h3>Cargando...</h3> : <ItemDetail product={product} />}
+		</>
+	);
 }
