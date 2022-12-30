@@ -5,16 +5,34 @@
 	text-decoration: none;
 	color: #fff7ef;
 	background-color: black;
+	margin: 0px 4px 0px 4px;
 	padding: 0.2rem 1rem;
-	margin: 4px;
+	border-radius: 0.25rem;
+	transition: all 0.5s ease;
+	align-self: top;
+}
+
+.button-cart:hover,
+.button-cart__purchase:hover {
+	background-color: #fff7ef;
+	color: black;
+}
+
+.button-emptycart,
+.button-emptycart__purchase {
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff7ef;
+	background-color: rgb(133, 7, 7);
+	margin: 0px 4px 0px 4px;
+	padding: 0.2rem 1rem;
 	border-radius: 0.25rem;
 	transition: all 0.5s ease;
 }
 
-.button-cart:hover,
-.button-cart:focus,
-.button-cart__purchase:hover,
-.button-cart__purchase:focus {
+.button-emptycart:hover,
+.button-emptycart__purchase:hover {
 	background-color: #fff7ef;
-	color: black;
+	color: rgb(133, 7, 7);
 }

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import Button from "../Button/Button";
 import "../ItemDetail/ItemDetail.css";
+import "../Button/Button.css"
 import { cartContext } from "../../storage/cartContext";
 
 //Por ahora este componente es sólo para mostrar los símbolos + y - junto con la cantidad
