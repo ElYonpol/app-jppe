@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 /* import { cartContext } from "../../storage/cartContext"; */
 import ItemList from "../ItemList/ItemList";
 import Loader from "../Loader/Loader";
-import getItems, { getItemsCategory } from "../../services/mockService";
+import { getItems, getItemsCategory } from "../../services/firebase";
 
 export default function ItemListContainer() {
 	const [products, setProducts] = useState([]);

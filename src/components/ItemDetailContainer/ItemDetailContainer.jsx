@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Loader from "../Loader/Loader";
-import { getSingleItem } from "../../services/mockService";
+/* import { getSingleItem } from "../../services/mockService"; */
+import { getSingleItem } from "../../services/firebase";
 
 export default function ItemDetailContainer() {
 	const [product, setProduct] = useState([]);
@@ -26,9 +27,5 @@ export default function ItemDetailContainer() {
 			});
 	}, [itemID]);
 
-	return (
-		<>
-			{isLoading ? <Loader /> : <ItemDetail product={product} />}
-		</>
-	);
+	return <>{isLoading ? <Loader /> : <ItemDetail product={product} />}</>;
 }

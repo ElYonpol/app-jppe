@@ -8,16 +8,19 @@ export default function Cart(props) {
 	const { removeItem } = useContext(cartContext);
 
 	let unidOunids = props.cartQty > 1 ? "unids" : "unid";
-	let urlDetail = `/item/${props.id}`;
+	let urlItemDetail = `/item/${props.id}`;
+	let urlCategoryDetail = `/category/${props.categoria}`;
 
 	return (
 		<>
 			<div className="purchaseCard">
-				<Link to={urlDetail}>
+				<Link to={urlItemDetail}>
 					<div className={`purchaseCard__image ${props.claseCSS}`}></div>
 				</Link>
 				<div className="purchaseCard-content">
-					<p className="purchaseCard-content__category">{props.categoria}</p>
+				<Link className="nav__link" to={urlCategoryDetail}>
+				<span className="purchaseCard-content__category">{props.categoria}</span>
+				</Link>
 					<p className="purchaseCard-content__title">{props.title}</p>
 					<p className="purchaseCard-content__body">{props.body}</p>
 					<div className="purchaseCard-content__priceQty">
@@ -29,7 +32,7 @@ export default function Cart(props) {
 							onButtonClick={() => removeItem(props.id)}
 							className="button-cart"
 						>
-							X
+							🗑
 						</Button>
 					</div>
 				</div>
