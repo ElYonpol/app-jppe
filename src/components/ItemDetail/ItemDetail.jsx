@@ -12,7 +12,7 @@ export default function ItemDetail(props) {
 
 	let urlCategoryDetail = `/category/${props.product.categoria}`;
 
-	if (props.product === "Item no encontrado") {
+	if (props.product === "Item no encontrado" || props.product.id === undefined) {
 		return (
 			<div className="cartCardDetail">
 				<div className={`cartCardDetail__image cartCard--error`}></div>
