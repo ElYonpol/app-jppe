@@ -12,6 +12,7 @@ export default function ItemDetailContainer() {
 	let { itemID } = useParams();
 
 	useEffect(() => {
+		setIsLoading(true)
 		getSingleItem(itemID)
 			.then((respuesta) => {
 				setProduct(respuesta);

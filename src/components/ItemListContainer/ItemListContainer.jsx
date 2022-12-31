@@ -11,6 +11,7 @@ export default function ItemListContainer() {
 	const { categoryID } = useParams();
 
 	useEffect(() => {
+		setIsLoading(true)
 		if (categoryID === undefined) {
 			getItems()
 				.then((respuesta) => {
