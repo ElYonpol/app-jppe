@@ -4,7 +4,11 @@ import Button from "../Button/Button";
 import "../ItemList/ItemList.css";
 
 export default function Item(props) {
-	if (props.categoria === "Error") {
+	if (
+		props.categoria === "Error" ||
+		props.categoria === undefined ||
+		props.categoria === null
+	) {
 		return (
 			<div className={`cartCardDetail cartCard--error`}>
 				<div className="cartCardDetail-content">

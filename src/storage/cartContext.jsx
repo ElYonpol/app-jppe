@@ -32,7 +32,7 @@ function CartContextProvider(props) {
 			setCart(newCart);
 		} else {
 			console.error(
-				"cartContext removeItem(cart) Item no encontrado en el carrito."
+				"cartContext.jsx función removeItem(cart) Item no encontrado en el carrito."
 			);
 		}
 	}

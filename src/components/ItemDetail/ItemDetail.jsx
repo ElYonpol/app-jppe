@@ -29,15 +29,6 @@ export default function ItemDetail(props) {
 		function handleAddToCart(cartQty) {
 			setQtyInCart(cartQty);
 			addToCart(props.product, cartQty);
-
-			console.log(
-				"Se agregaron al carrito:",
-				cartQty,
-				"unidades de",
-				props.product.title,
-				" Total:",
-				qtyInCart
-			);
 		}
 
 		function handleRemoveItem(itemShownOnScreen) {
@@ -55,11 +46,11 @@ export default function ItemDetail(props) {
 						className={`cartCardDetail__image ${props.product.claseCSS}`}
 					></div>
 					<div className="cartCardDetail-content">
-					<Link className="nav__link" to={urlCategoryDetail}>
-					<span className="cartCardDetail-content__category">
-							{props.product.categoria}
-						</span>
-				</Link>
+						<Link className="nav__link" to={urlCategoryDetail}>
+							<span className="cartCardDetail-content__category">
+								{props.product.categoria}
+							</span>
+						</Link>
 						<p className="cartCardDetail-content__title">
 							{props.product.title}
 						</p>

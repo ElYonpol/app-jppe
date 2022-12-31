@@ -61,7 +61,7 @@ export async function getItemsCategory(categoryID) {
 
 	const dataDocs = docsArray.map((doc) => {
 		return { ...doc.data(), id: doc.id };
+		
 	});
-
 	return dataDocs;
 }

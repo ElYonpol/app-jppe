@@ -1,6 +1,5 @@
-import React, { useState, useEffect /* useContext */ } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-/* import { cartContext } from "../../storage/cartContext"; */
 import ItemList from "../ItemList/ItemList";
 import Loader from "../Loader/Loader";
 import { getItems, getItemsCategory } from "../../services/firebase";
@@ -10,8 +9,6 @@ export default function ItemListContainer() {
 	const [isLoading, setIsLoading] = useState(true);
 
 	const { categoryID } = useParams();
-
-	/* const miContexto = useContext(cartContext); */
 
 	useEffect(() => {
 		if (categoryID === undefined) {
