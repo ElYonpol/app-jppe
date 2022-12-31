@@ -21,6 +21,7 @@
 	margin: 10px;
 	padding: 20px;
 	justify-content: space-between;
+	position: relative;
 }
 
 .purchaseCard-content {
@@ -74,4 +75,24 @@
 	padding: 10px;
 	border-radius: 10px;
 	justify-content: flex-end;
+}
+
+.button-cart__topRight {
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff7ef;
+	background-color: rgb(133, 7, 7);
+	margin: 0px 4px 0px 4px;
+	padding: 0.2rem 1rem;
+	border-radius: 0.25rem;
+	transition: all 0.5s ease;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.button-cart__topRight:hover {
+	background-color: #fff7ef;
+	color: black;
 }

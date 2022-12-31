@@ -30,7 +30,7 @@ export default function Cart(props) {
 						</span>
 						<Button
 							onButtonClick={() => removeItem(props.id)}
-							className="button-cart"
+							className="button-cart__topRight"
 						>
 							🗑
 						</Button>
