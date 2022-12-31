@@ -12,8 +12,16 @@ function CartContextProvider(props) {
 		const newCart = [...cart];
 
 		if (indexItemInCart !== -1) {
-			newCart[indexItemInCart].cartQty += cartQty;
-			setCart(newCart);
+			if (
+				newCart[indexItemInCart].cartQty + cartQty <=
+				newCart[indexItemInCart].cantidad
+			) {
+				newCart[indexItemInCart].cartQty += cartQty;
+				setCart(newCart);
+			} else {
+				newCart[indexItemInCart].cartQty = newCart[indexItemInCart].cantidad;
+				setCart(newCart);
+			}
 		} else {
 			newCart.push({ ...item, cartQty });
 			setCart(newCart);
