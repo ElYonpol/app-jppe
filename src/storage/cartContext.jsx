@@ -12,16 +12,11 @@ function CartContextProvider(props) {
 		const newCart = [...cart];
 
 		if (indexItemInCart !== -1) {
-			if (
-				newCart[indexItemInCart].cartQty + cartQty <=
-				newCart[indexItemInCart].cantidad
-			) {
-				newCart[indexItemInCart].cartQty += cartQty;
-				setCart(newCart);
-			} else {
-				newCart[indexItemInCart].cartQty = newCart[indexItemInCart].cantidad;
-				setCart(newCart);
-			}
+			newCart[indexItemInCart].cartQty = Math.min(
+				newCart[indexItemInCart].cantidad,
+				newCart[indexItemInCart].cartQty + cartQty
+			);
+			setCart(newCart);
 		} else {
 			newCart.push({ ...item, cartQty });
 			setCart(newCart);
