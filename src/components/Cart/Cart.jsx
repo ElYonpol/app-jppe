@@ -18,11 +18,9 @@ export default function Cart(props) {
 					<div className={`purchaseCard__image ${props.claseCSS}`}></div>
 				</Link>
 				<div className="purchaseCard-content">
-					<Link className="nav__link" to={urlCategoryDetail}>
-						<span className="purchaseCard-content__category">
-							{props.categoria}
-						</span>
-					</Link>
+				<Link className="nav__link" to={urlCategoryDetail}>
+				<span className="purchaseCard-content__category">{props.categoria}</span>
+				</Link>
 					<p className="purchaseCard-content__title">{props.title}</p>
 					<p className="purchaseCard-content__body">{props.body}</p>
 					<div className="purchaseCard-content__priceQty">
@@ -44,7 +42,7 @@ export default function Cart(props) {
 }
 
 export function CartTotal() {
-	const { valueContext } = useContext(cartContext);
+	const valueContext = useContext(cartContext);
 
 	const totalValueInCart = valueContext.totalValueInCartfn();
 

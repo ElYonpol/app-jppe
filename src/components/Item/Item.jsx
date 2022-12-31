@@ -4,7 +4,6 @@ import Button from "../Button/Button";
 import "../ItemList/ItemList.css";
 
 export default function Item(props) {
-	console.table(props.categorial);
 	if (
 		props.categoria === "Error" ||
 		props.categoria === undefined ||
