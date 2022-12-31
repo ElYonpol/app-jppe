@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Loader from "../Loader/Loader";
-/* import { getSingleItem } from "../../services/mockService"; */
 import { getSingleItem } from "../../services/firebase";
 
 export default function ItemDetailContainer() {
