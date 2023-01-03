@@ -15,6 +15,7 @@ import { CartTotal } from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 
 import { CartContextProvider } from "./storage/cartContext";
+import Item from "./components/Item/Item";
 
 function App() {
 	return (

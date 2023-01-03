@@ -18,9 +18,11 @@ export default function Cart(props) {
 					<div className={`purchaseCard__image ${props.claseCSS}`}></div>
 				</Link>
 				<div className="purchaseCard-content">
-				<Link className="nav__link" to={urlCategoryDetail}>
-				<span className="purchaseCard-content__category">{props.categoria}</span>
-				</Link>
+					<Link className="nav__link__cart" to={urlCategoryDetail}>
+						<span className="purchaseCard-content__category">
+							{props.categoria}
+						</span>
+					</Link>
 					<p className="purchaseCard-content__title">{props.title}</p>
 					<p className="purchaseCard-content__body">{props.body}</p>
 					<div className="purchaseCard-content__priceQty">
@@ -32,7 +34,7 @@ export default function Cart(props) {
 							onButtonClick={() => removeItem(props.id)}
 							className="button-cart__topRight"
 						>
-							🗑
+							x
 						</Button>
 					</div>
 				</div>
@@ -44,17 +46,28 @@ export default function Cart(props) {
 export function CartTotal() {
 	const valueContext = useContext(cartContext);
 
+	const { emptyCart } = useContext(cartContext);
+
 	const totalValueInCart = valueContext.totalValueInCartfn();
 
 	let totalQtyInCart = valueContext.totalQtyInCartfn();
 
 	let unidOunids = totalQtyInCart > 1 ? "unids" : "unid";
 
+	function handleEmptyCart(cart) {
+		emptyCart(cart);
+	}
+
 	if (!totalQtyInCart) {
 		return (
 			<>
-				<div className="display-1--subtitle">El Carrito está vacío.</div>
-				<Link to="/servicios" className="nav__link display-1--subtitle">
+				<div className="display-1--description__cart">
+					El Carrito está vacío.
+				</div>
+				<Link
+					to="/servicios"
+					className="nav__link__cart display-1--subtitle__cart"
+				>
 					Regresar a Servicios
 				</Link>
 			</>
@@ -70,6 +83,13 @@ export function CartTotal() {
 							Total Compra ${totalValueInCart.toLocaleString()} -{" "}
 							{totalQtyInCart.toLocaleString()} {unidOunids}
 						</span>
+						<Button
+							onButtonClick={() => handleEmptyCart()}
+							className="button-cart--Total__topRight"
+							
+						>
+							🗑
+						</Button>
 					</div>
 				</div>
 			</div>
