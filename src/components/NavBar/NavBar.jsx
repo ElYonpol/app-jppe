@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import Select from "react-select";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import logo from "../../assets/icons/icon_pe.jpg";
 import "./NavBar.css";
 
 export default function NavBar() {
+	const dropdownMenuOptions = [
+		{ id: 1, label: "Estética", value: "/category/Estética" },
+		{ id: 2, label: "Prótesis", value: "/category/Prótesis" },
+		{ id: 3, label: "Rehabilitación", value: "/category/Rehabilitación" },
+	];
+
+	const [selectedMenuOption, setSelectedMenuOption] = useState();
+
+	const handleSelectChange = (event) => {
+		console.log(event.value);
+		setSelectedMenuOption(event.value);
+	};
+
 	return (
 		<header id="header">
 			<nav className="bs--navbar">
@@ -19,28 +33,35 @@ export default function NavBar() {
 						</Link>
 					</div>
 					<div className="col">
-						<label for="services" className="nav__list">
-							Seleccione una categoría
-						</label>
-						<select name="services" id="services" className="dropdown--nav__list">
-							<option value="Estética" className="dropdown--nav__list">
-								<Link to="/category/Estética" className="dropdown--nav__list">
-									Estética
-								</Link>
-							</option>
-							<option value="Prótesis" className="dropdown--nav__list">
-								<Link to="/category/Prótesis" className="dropdown--nav__list">
-									Prótesis
-								</Link>
-							</option>
-							<option value="Rehabilitación" className="dropdown--nav__list">
-								<Link to="/category/Rehabilitación" className="dropdown--nav__list">
-									Rehabilitación
-								</Link>
-							</option>
-						</select>
+						<Select
+							className="dropdown--nav__link"
+							defaultValue={{
+								label: "Categorías:",
+								value: "empty",
+							}}
+							options={dropdownMenuOptions.map((sup) => ({
+								label: sup.label,
+								value: sup.value,
+							}))}
+							onChange={handleSelectChange}
+						></Select>
 
 						<ul className="nav__list">
+							<li className="nav__link">
+								<Link to="/category/Estética" className="nav__link">
+									Estética
+								</Link>
+							</li>
+							<li className="nav__link">
+								<Link to="/category/Prótesis" className="nav__link">
+									Prótesis
+								</Link>
+							</li>
+							<li className="nav__link">
+								<Link to="/category/Rehabilitación" className="nav__link">
+									Rehabilitación
+								</Link>
+							</li>
 							<li>
 								<Link to="/servicios" className="nav__link">
 									Servicios

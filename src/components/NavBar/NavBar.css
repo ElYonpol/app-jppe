@@ -48,14 +48,26 @@ header {
 	text-shadow: 2px 2px 4px black;
 }
 
-.dropdown--nav__list {
+.dropdown--nav__link {
 	font-size: 1.5rem;
-	color: #475681;
+	color: #6f756b;
 	text-transform: uppercase;
+	text-align: left;
 	font-weight: bold;
 	list-style: none;
 	display: inline-block;
 	text-shadow: 2px 2px 4px #6f756b;
+	min-width: 280px;
+}
+
+.dropdown--nav__list {
+	font-size: 1.5rem;
+	color: #fff7ef;
+	text-transform: uppercase;
+	font-weight: bold;
+	list-style: none;
+	display: inline-block;
+	text-shadow: 2px 2px 4px black;
 }
 
 .nav__list li {
