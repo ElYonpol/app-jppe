@@ -1,7 +1,8 @@
 # Coderhouse:
-# Ir al Menú "SERVICIOS" para ver las Cards.
-# Seleccionar el ícono "🛒" para ver el Carrito de Compras.
 
+# Ir al Menú "SERVICIOS" para ver las Cards.
+
+# Seleccionar el ícono "🛒" para ver el Carrito de Compras.
 
 # peyasoc
 
@@ -19,11 +20,10 @@ La app aún no intercambia información con ningún servidor. La página de comp
 <br>
 <b>Estilo de código / Lenguajes y Tecnología utilizadas</b>
 <br>
-El código fue realizado en HTML, CSS y JS y React Js.
+El código fue realizado en HTML, CSS, JS y React Js.
 <br>
 <br>
 <b>Desarrollado por Juan Pablo Portas Esquivel</b>
-
 
 # Getting Started with Create React App
 
