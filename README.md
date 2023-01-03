@@ -15,7 +15,7 @@ Este Proyecto fue diseñado dentro del marco del curso "React Js" de Coderhouse.
 <br>
 <b>Estado de construcción</b>
 <br>
-La app aún no es funcional ni intercambia información con ningún servidor. La página de compras y carrito simula una conexión remota a un servidor.
+La app aún no intercambia información con ningún servidor. La página de compras y carrito simula una conexión remota a un servidor.
 <br>
 <b>Estilo de código / Lenguajes y Tecnología utilizadas</b>
 <br>
