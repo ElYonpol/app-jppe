@@ -33,6 +33,7 @@ export default function Cart(props) {
 						<Button
 							onButtonClick={() => removeItem(props.id)}
 							className="button-cart__topRight"
+							title={`Quitar item "${props.title}"`}
 						>
 							x
 						</Button>
@@ -86,7 +87,7 @@ export function CartTotal() {
 						<Button
 							onButtonClick={() => handleEmptyCart()}
 							className="button-cart--Total__topRight"
-							
+							title="Vaciar carrito"
 						>
 							🗑
 						</Button>
