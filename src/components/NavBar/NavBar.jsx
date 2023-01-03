@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Select from "react-select";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import logo from "../../assets/icons/icon_pe.jpg";
 import "./NavBar.css";
@@ -12,11 +12,10 @@ export default function NavBar() {
 		{ id: 3, label: "Rehabilitación", value: "/category/Rehabilitación" },
 	];
 
-	const [selectedMenuOption, setSelectedMenuOption] = useState();
+	const navigate = useNavigate();
 
 	const handleSelectChange = (event) => {
-		console.log(event.value);
-		setSelectedMenuOption(event.value);
+		navigate(event.value);
 	};
 
 	return (
@@ -47,21 +46,6 @@ export default function NavBar() {
 						></Select>
 
 						<ul className="nav__list">
-							<li className="nav__link">
-								<Link to="/category/Estética" className="nav__link">
-									Estética
-								</Link>
-							</li>
-							<li className="nav__link">
-								<Link to="/category/Prótesis" className="nav__link">
-									Prótesis
-								</Link>
-							</li>
-							<li className="nav__link">
-								<Link to="/category/Rehabilitación" className="nav__link">
-									Rehabilitación
-								</Link>
-							</li>
 							<li>
 								<Link to="/servicios" className="nav__link">
 									Servicios
