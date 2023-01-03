@@ -37,6 +37,27 @@ header {
 	padding: 5px;
 }
 
+.nav__list {
+	font-size: 1.5rem;
+	color: #fff7ef;
+	text-transform: uppercase;
+	font-weight: bold;
+	list-style: none;
+	display: inline-block;
+	align-self: center;
+	text-shadow: 2px 2px 4px black;
+}
+
+.dropdown--nav__list {
+	font-size: 1.5rem;
+	color: #475681;
+	text-transform: uppercase;
+	font-weight: bold;
+	list-style: none;
+	display: inline-block;
+	text-shadow: 2px 2px 4px #6f756b;
+}
+
 .nav__list li {
 	font-size: 1.5rem;
 	margin-left: 1.5rem;

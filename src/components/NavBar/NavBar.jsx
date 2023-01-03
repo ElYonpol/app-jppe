@@ -19,22 +19,28 @@ export default function NavBar() {
 						</Link>
 					</div>
 					<div className="col">
-						<ul className="nav__list">
-							<li>
-								<Link to="/category/Estética" className="nav__link">
+						<label for="services" className="nav__list">
+							Seleccione una categoría
+						</label>
+						<select name="services" id="services" className="dropdown--nav__list">
+							<option value="Estética" className="dropdown--nav__list">
+								<Link to="/category/Estética" className="dropdown--nav__list">
 									Estética
 								</Link>
-							</li>
-							<li>
-								<Link to="/category/Prótesis" className="nav__link">
+							</option>
+							<option value="Prótesis" className="dropdown--nav__list">
+								<Link to="/category/Prótesis" className="dropdown--nav__list">
 									Prótesis
 								</Link>
-							</li>
-							<li>
-								<Link to="/category/Rehabilitación" className="nav__link">
+							</option>
+							<option value="Rehabilitación" className="dropdown--nav__list">
+								<Link to="/category/Rehabilitación" className="dropdown--nav__list">
 									Rehabilitación
 								</Link>
-							</li>
+							</option>
+						</select>
+
+						<ul className="nav__list">
 							<li>
 								<Link to="/servicios" className="nav__link">
 									Servicios
