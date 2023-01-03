@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { cartContext } from "../../storage/cartContext";
 import Cart from "../Cart/Cart";
 
-export default function CartContainer() {
+export default function CartContainer(props) {
 	const { cart } = useContext(cartContext);
 	return (
 		<>
