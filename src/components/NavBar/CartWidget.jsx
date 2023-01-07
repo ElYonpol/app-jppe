@@ -11,14 +11,14 @@ function CartWidget() {
 
 	return (
 		<>
-			<div>
+			<div title="Ver Carrito">
 				<span className="nav__link">🛒</span>
 			</div>
 			{totalQtyInCart > 0 && (
-				<div className="cart__qty">
-					<span className="nav__list">{totalItemsInCart}</span>
-					<span> / </span>
-					<span className="nav__list">{totalQtyInCart}</span>
+				<div className="cart__qty"  title="Ver Carrito">
+					<span className="nav__list">
+						{totalItemsInCart} / {totalQtyInCart}
+					</span>
 				</div>
 			)}
 		</>

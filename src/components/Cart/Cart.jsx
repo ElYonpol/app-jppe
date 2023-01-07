@@ -14,11 +14,11 @@ export default function Cart(props) {
 	return (
 		<>
 			<div className="purchaseCard">
-				<Link to={urlItemDetail}>
+				<Link to={urlItemDetail} title={`Ver Producto "${props.title}"`}>
 					<div className={`purchaseCard__image ${props.claseCSS}`}></div>
 				</Link>
 				<div className="purchaseCard-content">
-					<Link className="nav__link__cart" to={urlCategoryDetail}>
+					<Link className="nav__link__cart" to={urlCategoryDetail} title={`Ver productos de la Categoría "${props.categoria}"`}>
 						<span className="purchaseCard-content__category">
 							{props.categoria}
 						</span>
@@ -34,6 +34,7 @@ export default function Cart(props) {
 							onButtonClick={() => removeItem(props.id)}
 							className="button-cart__topRight"
 							title={`Quitar item "${props.title}"`}
+							disabled={false}
 						>
 							x
 						</Button>
@@ -88,6 +89,7 @@ export function CartTotal() {
 							onButtonClick={() => handleEmptyCart()}
 							className="button-cart--Total__topRight"
 							title="Vaciar carrito"
+							disabled={false}
 						>
 							🗑
 						</Button>
