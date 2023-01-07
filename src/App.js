@@ -61,7 +61,7 @@ function App() {
 									}
 								/>
 								<Route
-									path="/item/:itemID"
+									path="/:categoryID/item/:itemID"
 									element={
 										<>
 											<div className="col--main">

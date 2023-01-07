@@ -16,7 +16,7 @@ function CartWidget() {
 			</div>
 			{totalQtyInCart > 0 && (
 				<div className="cart__qty"  title="Ver Carrito">
-					<span className="nav__list">
+					<span className="nav__list cart__qty">
 						{totalItemsInCart} / {totalQtyInCart}
 					</span>
 				</div>

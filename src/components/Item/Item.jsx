@@ -18,7 +18,7 @@ export default function Item(props) {
 			</div>
 		);
 	} else {
-		let urlDetail = `/item/${props.id}`;
+		let urlDetail = `/${props.categoria}/item/${props.id}`;
 
 		return (
 			<>

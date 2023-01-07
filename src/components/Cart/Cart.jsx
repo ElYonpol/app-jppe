@@ -8,7 +8,7 @@ export default function Cart(props) {
 	const { removeItem } = useContext(cartContext);
 
 	let unidOunids = props.cartQty > 1 ? "unids" : "unid";
-	let urlItemDetail = `/item/${props.id}`;
+	let urlItemDetail = `/${props.categoria}/item/${props.id}`;
 	let urlCategoryDetail = `/category/${props.categoria}`;
 
 	return (

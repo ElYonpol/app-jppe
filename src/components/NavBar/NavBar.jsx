@@ -21,19 +21,20 @@ export default function NavBar() {
 					<div className="col">
 						<ul className="nav__list">
 							<li>
-								<Link to="/category/Estética" className="nav__link">Estética</Link>
+								<Link to="/category/Estética" className="nav__link" title="Ver productos de la Categoría Estética">Estética</Link>
 							</li>
 							<li>
-								<Link to="/category/Prótesis" className="nav__link">Prótesis</Link>
+								<Link to="/category/Prótesis" className="nav__link" title="Ver productos de la Categoría Prótesis">Prótesis</Link>
 							</li>
 							<li>
 								<Link
 									to="/category/Rehabilitación"
 									className="nav__link"
+									title="Ver productos de la Categoría Rehabilitación"
 								>Rehabilitación</Link>
 							</li>
 							<li>
-								<Link to="/servicios" className="nav__link">
+								<Link to="/servicios" className="nav__link" title="Ver todos los productos">
 									Servicios
 								</Link>
 							</li>
