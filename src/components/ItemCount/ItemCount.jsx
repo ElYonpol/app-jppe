@@ -3,11 +3,13 @@ import Button from "../Button/Button";
 import "../ItemDetail/ItemDetail.css";
 import "../Button/Button.css"
 
-//Por ahora este componente es sólo para mostrar los símbolos + y - junto con la cantidad
-//que luego el usuario iría a comprar. El límite máximo de compra es el stock del producto
+//Por ahora este componente es para mostrar los símbolos + y - junto con la cantidad
+//que luego el usuario iría a comprar, el botón de "Agregar item" y 
+//el botón para ir al carrito.
+//El límite máximo de compra es el stock del producto.
 
 function ItemCount(props) {
-	const { onHandInventory, onAddToCart, onRemoveItem, itemShownOnScreen } = props;
+	const { onHandInventory, onAddToCart } = props;
 
 	const MAX_ITEM_INVENTORY = onHandInventory;
 
@@ -39,14 +41,6 @@ function ItemCount(props) {
 						className="button-cart"
 					>
 						Agregar item 🛒
-					</Button>
-				</span>
-				<span>
-					<Button
-						onButtonClick={() => onRemoveItem(itemShownOnScreen)}
-						className="button-cart"
-					>
-						Quitar item 🗑
 					</Button>
 				</span>
 			</div>

@@ -10,6 +10,7 @@ function CartContextProvider(props) {
 			(itemInContext) => itemInContext.id === item.id
 		);
 		const newCart = [...cart];
+		console.log(newCart)
 
 		if (indexItemInCart !== -1) {
 			newCart[indexItemInCart].cartQty = Math.min(
@@ -63,9 +64,9 @@ function CartContextProvider(props) {
 				addToCart,
 				removeItem,
 				emptyCart,
-				totalItemsInCartfn,
 				totalQtyInCartfn,
 				totalValueInCartfn,
+				totalItemsInCartfn,
 			}}
 		>
 			{props.children}

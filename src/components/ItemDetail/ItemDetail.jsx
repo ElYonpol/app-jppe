@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import Button from "../Button/Button";
@@ -6,8 +6,6 @@ import "./ItemDetail.css";
 import { cartContext } from "../../storage/cartContext";
 
 export default function ItemDetail(props) {
-	const [qtyInCart, setQtyInCart] = useState(0);
-
 	const { addToCart, removeItem, emptyCart } = useContext(cartContext);
 
 	let urlCategoryDetail = `/category/${props.product.categoria}`;
@@ -27,7 +25,6 @@ export default function ItemDetail(props) {
 		);
 	} else {
 		function handleAddToCart(cartQty) {
-			setQtyInCart(cartQty);
 			addToCart(props.product, cartQty);
 		}
 
