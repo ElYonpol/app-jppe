@@ -1,25 +1,19 @@
-import { useState, useEffect } from "react";
 import "../../index.css";
 
 export default function Greeting() {
-	const [person, setPerson] = useState("...");
-
-	useEffect(() => {
-		setPerson("Usuario"); //En el futuro esto debiera identificar al Usuario
-	}, []);
-
 	return (
 		<>
-			<div className="display-1--description">Hola {person}</div>
 			<div className="display-1--subtitle">Odontología de Excelencia</div>
-			<hr />
+			<br />
+			<br />
 			<div className="display-1--subtitle">
 				Seleccione el Menú "SERVICIOS" para ver las Cards.
 			</div>
 			<div className="display-1--subtitle">
 				Seleccione el ícono "🛒" para ver el Carrito de Compras.
 			</div>
-			<hr />
+			<br />
+			<br />
 			<div className="display-1--description">
 				Brindamos soluciones integrales en estética dental, blanqueamiento,
 				endodoncia, odontología general, ortodoncia y prótesis.
