@@ -8,12 +8,9 @@ export default function CartContainer() {
 	return (
 		<>
 			{cart.map((item) => {
-				const key = item.id;
-				console.log("CartContainer key:", key);
 				return (
-					<>
 						<Cart
-							key={key}
+							key={item.id}
 							id={item.id}
 							articulo={item.articulo}
 							categoria={item.categoria}
@@ -25,7 +22,6 @@ export default function CartContainer() {
 							cantidad={item.cantidad}
 							cartQty={item.cartQty}
 						/>
-					</>
 				);
 			})}
 		</>

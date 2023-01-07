@@ -7,9 +7,8 @@ import { cartContext } from "../../storage/cartContext";
 export default function Cart(props) {
 	const { removeItem } = useContext(cartContext);
 
-	console.log("Cart key:", props.key);
-	console.log("Cart articulo:", props.articulo);
-	console.log("Cart cartQty:", props.key);
+	console.log("Cart key:",props.key);
+	console.log("Cart cartQty:",props.cartQty);
 
 	let unidOunids = props.cartQty > 1 ? "unids" : "unid";
 	let urlItemDetail = `/${props.categoria}/item/${props.id}`;
