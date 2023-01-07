@@ -1,31 +1,30 @@
-# Coderhouse:
-
-# Ir al Menú "SERVICIOS" para ver las Cards.
-
-# Seleccionar el ícono "🛒" para ver el Carrito de Compras.
-
 # peyasoc
 
-<b>Proyecto "Portas Esquivel & Asociados"</b>
-<br>
-Este desarrollo se refiere a un sitio web del tipo SPA para un consultorio odontológico: Página principal, Categorías de Servicios odontológicos ofrecidos, Compras de Servicios y Carrito de Compras.
-<br>
-<b>Motivación</b>
-<br>
-Este Proyecto fue diseñado dentro del marco del curso "React Js" de Coderhouse.
-<br>
-<b>Estado de construcción</b>
-<br>
-La app aún no intercambia información con ningún servidor. La página de compras y carrito simula una conexión remota a un servidor.
-<br>
-<b>Estilo de código / Lenguajes y Tecnología utilizadas</b>
-<br>
-El código fue realizado en HTML, CSS, JS y React Js.
-<br>
-<br>
-<b>Desarrollado por Juan Pablo Portas Esquivel</b>
+## Coderhouse
 
-# Getting Started with Create React App
+### Ir al Menú "SERVICIOS" para ver las Cards
+
+### Seleccionar el ícono "🛒" para ver el Carrito de Compras
+
+## Proyecto "Portas Esquivel & Asociados"
+
+Este desarrollo se refiere a un sitio web del tipo SPA para un consultorio odontológico: Página principal, Categorías de Servicios odontológicos ofrecidos, Compras de Servicios y Carrito de Compras.
+
+### **Motivación**
+
+Este Proyecto fue diseñado dentro del marco del curso "React Js" de Coderhouse.
+
+### **Estado de construcción**
+
+La app aún no intercambia información con ningún servidor. La página de compras y carrito simula una conexión remota a un servidor.
+
+### **Estilo de código / Lenguajes y Tecnología utilizadas**
+
+El código fue realizado en HTML, CSS, JS y React Js / CRA.
+
+### **_Desarrollado por Juan Pablo Portas Esquivel_**
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

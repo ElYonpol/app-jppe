@@ -7,6 +7,10 @@ import { cartContext } from "../../storage/cartContext";
 export default function Cart(props) {
 	const { removeItem } = useContext(cartContext);
 
+	console.log("Cart key:", props.key);
+	console.log("Cart articulo:", props.articulo);
+	console.log("Cart cartQty:", props.key);
+
 	let unidOunids = props.cartQty > 1 ? "unids" : "unid";
 	let urlItemDetail = `/${props.categoria}/item/${props.id}`;
 	let urlCategoryDetail = `/category/${props.categoria}`;
@@ -18,7 +22,11 @@ export default function Cart(props) {
 					<div className={`purchaseCard__image ${props.claseCSS}`}></div>
 				</Link>
 				<div className="purchaseCard-content">
-					<Link className="nav__link__cart" to={urlCategoryDetail} title={`Ver productos de la Categoría "${props.categoria}"`}>
+					<Link
+						className="nav__link__cart"
+						to={urlCategoryDetail}
+						title={`Ver productos de la Categoría "${props.categoria}"`}
+					>
 						<span className="purchaseCard-content__category">
 							{props.categoria}
 						</span>
