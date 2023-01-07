@@ -39,6 +39,7 @@ function ItemCount(props) {
 					<Button
 						onButtonClick={() => onAddToCart(cartQty)}
 						className="button-cart"
+						disabled={false}
 					>
 						Agregar item 🛒
 					</Button>

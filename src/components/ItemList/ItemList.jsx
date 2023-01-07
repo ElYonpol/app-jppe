@@ -18,6 +18,7 @@ export default function ItemList(props) {
 							body={item.body}
 							precio={item.precio}
 							cantidad={item.cantidad}
+							path={`${item.categoria}/${item.id}`}
 						/>
 					);
 				})}
