@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import Button from "../Button/Button";
@@ -6,11 +6,15 @@ import "./ItemDetail.css";
 import { cartContext } from "../../storage/cartContext";
 
 export default function ItemDetail(props) {
-	const { addToCart, removeItem, emptyCart } = useContext(cartContext);
+	const { addToCart } = useContext(cartContext);
+	const [qtyInStock, setQtyInStock] = useState(props.product.cantidad);
 
 	let urlCategoryDetail = `/category/${props.product.categoria}`;
 
-	if (props.product === "Item no encontrado" || props.product.id === undefined) {
+	if (
+		props.product === "Item no encontrado" ||
+		props.product.id === undefined
+	) {
 		return (
 			<div className="cartCardDetail">
 				<div className={`cartCardDetail__image cartCard--error`}></div>
@@ -26,14 +30,7 @@ export default function ItemDetail(props) {
 	} else {
 		function handleAddToCart(cartQty) {
 			addToCart(props.product, cartQty);
-		}
-
-		function handleRemoveItem(itemShownOnScreen) {
-			removeItem(itemShownOnScreen);
-		}
-
-		function handleEmptyCart(cart) {
-			emptyCart(cart);
+			setQtyInStock(Math.max(0, qtyInStock - cartQty));
 		}
 
 		return (
@@ -59,11 +56,9 @@ export default function ItemDetail(props) {
 							onHandInventory={props.product.cantidad}
 							itemShownOnScreen={props.product.id}
 							onAddToCart={handleAddToCart}
-							onRemoveItem={handleRemoveItem}
-							onEmptyCart={handleEmptyCart}
 						/>
 						<span className="cartCardDetail-content__title">
-							{props.product.cantidad} unidades disponibles
+							{qtyInStock} unidades disponibles
 						</span>{" "}
 						--{" "}
 						<span>

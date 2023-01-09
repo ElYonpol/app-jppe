@@ -64,3 +64,7 @@ export async function getItemsCategory(categoryID) {
 	});
 	return dataDocs;
 }
+
+export async function sendItemsToFirebase(){
+
+}

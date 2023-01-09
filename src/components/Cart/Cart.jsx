@@ -11,6 +11,10 @@ export default function Cart(props) {
 	let urlItemDetail = `/${props.categoria}/item/${props.id}`;
 	let urlCategoryDetail = `/category/${props.categoria}`;
 
+	function handleRemoveItem(itemShownOnScreen) {
+		removeItem(itemShownOnScreen);
+	}
+
 	return (
 		<>
 			<div className="purchaseCard">
@@ -35,7 +39,7 @@ export default function Cart(props) {
 							{props.cartQty.toLocaleString()} {unidOunids}
 						</span>
 						<Button
-							onButtonClick={() => removeItem(props.id)}
+							onButtonClick={() => handleRemoveItem(props.id, props.cartQty)}
 							className="button-cart__topRight"
 							title={`Quitar item "${props.title}"`}
 							disabled={false}
