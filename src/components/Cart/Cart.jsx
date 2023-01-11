@@ -101,9 +101,9 @@ export function CartTotal() {
 		emptyCart(cart);
 	}
 
-	function handlePurchaseOrder() {
+	function handlePurchaseOrder(buyerData) {
 		const order = {
-			buyer: { name: "Pedro", phone: "1111", email: "pedro@bello.com" },
+			buyer: buyerData,
 			items: cart,
 			total: totalValueInCart,
 			date: new Date(),
@@ -126,6 +126,12 @@ export function CartTotal() {
 		setBuyerData(newBuyerData);
 	}
 
+	function onSubmit(evt) {
+		evt.preventDefault();
+		handlePurchaseOrder(buyerData);
+		setBuyerData({ name: "", email: "", phone: "" });
+	}
+
 	if (!totalQtyInCart) {
 		return (
 			<>
@@ -145,18 +151,18 @@ export function CartTotal() {
 	return (
 		<>
 			<div className="purchaseCard purchaseCard--Total">
-					<span>
-						Total Compra ${totalValueInCart.toLocaleString()} -{" "}
-						{totalQtyInCart.toLocaleString()} {unidOunids}
-					</span>
-					<Button
-						onButtonClick={() => handleEmptyCart()}
-						className="button-cart--Total__topRight"
-						title="Vaciar carrito"
-						disabled={false}
-					>
-						🗑
-					</Button>
+				<span>
+					Total Compra ${totalValueInCart.toLocaleString()} -{" "}
+					{totalQtyInCart.toLocaleString()} {unidOunids}
+				</span>
+				<Button
+					onButtonClick={() => handleEmptyCart()}
+					className="button-cart--Total__topRight"
+					title="Vaciar carrito"
+					disabled={false}
+				>
+					🗑
+				</Button>
 			</div>
 			<div>
 				<form className="inputForm__container">
@@ -181,14 +187,13 @@ export function CartTotal() {
 						value={buyerData.phone}
 						onChange={handleInputChange}
 					/>
-					<Button
-					onButtonClick={() => handlePurchaseOrder()}
-					className="button-cart__Purchase"
-					title="Finalizar Compra"
-					disabled={false}
-				>
-					Comprar
-				</Button>
+					<button
+						onClick={onSubmit}
+						className="button-cart__Purchase"
+						title="Finalizar Compra"
+					>
+						Comprar
+					</button>
 				</form>
 			</div>
 		</>
