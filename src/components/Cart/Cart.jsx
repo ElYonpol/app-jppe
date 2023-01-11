@@ -90,6 +90,7 @@ export function CartTotal() {
 		email: "",
 		phone: "",
 	});
+	const [formError, setFormError] = useState(null);
 
 	const totalValueInCart = cartValues.totalValueInCartfn();
 
@@ -128,8 +129,22 @@ export function CartTotal() {
 
 	function onSubmit(evt) {
 		evt.preventDefault();
+		if (!buyerData.name) {
+			return setFormError("Por favor ingrese su nombre completo.");
+		}
+
+		if (!buyerData.email) {
+			return setFormError("Por favor ingrese su dirección de e-mail.");
+		}
+
+		if (!buyerData.phone) {
+			return setFormError("Por favor ingrese su número de teléfono.");
+		}
+
 		handlePurchaseOrder(buyerData);
+
 		setBuyerData({ name: "", email: "", phone: "" });
+		setFormError("");
 	}
 
 	if (!totalQtyInCart) {
@@ -195,6 +210,11 @@ export function CartTotal() {
 						Comprar
 					</button>
 				</form>
+				{formError && (
+					<div>
+						<span className="formErrorMessage">{formError}</span>
+					</div>
+				)}
 			</div>
 		</>
 	);
