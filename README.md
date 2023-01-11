@@ -21,6 +21,7 @@ La app intercambia información con Firebase.
 ### **Estilo de código / Lenguajes y Tecnología utilizadas**
 
 El código fue realizado en HTML, CSS, JS y React Js / CRA.
+Fuera de los conceptos vistos en clase, se utilizaron npm de Toastify para brindar feedback al usuario el interactuar con el carrito de compras, ya sea agregando o quitando productos.
 
 ### **_Desarrollado por Juan Pablo Portas Esquivel_**
 
