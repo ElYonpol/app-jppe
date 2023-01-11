@@ -31,18 +31,37 @@ export default function ItemDetail(props) {
 		);
 	} else {
 		function handleAddToCart(cartQty) {
-			addToCart(props.product, cartQty);
-			toast.success(`El producto ${props.product.title} fue agregado al carrito`, {
-				position: "top-right",
-				autoClose: 1500,
-				hideProgressBar: false,
-				closeOnClick: true,
-				pauseOnHover: true,
-				draggable: true,
-				progress: undefined,
-				theme: "colored",
-				});
-			setQtyInStock(Math.max(0, qtyInStock - cartQty));
+			if (qtyInStock > 0) {
+				addToCart(props.product, cartQty);
+				toast.success(
+					`El producto ${props.product.title} fue agregado al carrito`,
+					{
+						position: "top-right",
+						autoClose: 1500,
+						hideProgressBar: false,
+						closeOnClick: true,
+						pauseOnHover: true,
+						draggable: true,
+						progress: undefined,
+						theme: "colored",
+					}
+				);
+				setQtyInStock(Math.max(0, qtyInStock - cartQty));
+			} else {
+				toast.error(
+					`El producto ${props.product.title} no tiene stock disponible`,
+					{
+						position: "top-right",
+						autoClose: 1500,
+						hideProgressBar: false,
+						closeOnClick: true,
+						pauseOnHover: true,
+						draggable: true,
+						progress: undefined,
+						theme: "colored",
+					}
+				);
+			}
 		}
 
 		return (
