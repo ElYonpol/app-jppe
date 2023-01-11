@@ -12,6 +12,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Greeting from "./components/Greeting/Greeting";
 import CartContainer from "./components/CartContainer/CartContainer";
 import { CartTotal } from "./components/Cart/Cart";
+import PurchaseCheckOut from "./components/PurchaseCheckOut/PurchaseCheckOut";
 import Footer from "./components/Footer/Footer";
 
 import { CartContextProvider } from "./storage/cartContext";
@@ -116,6 +117,26 @@ function App() {
 												<div className="purchaseCards--container">
 													<CartTotal />
 													<CartContainer />
+												</div>
+											</div>
+										</>
+									}
+								/>
+								<Route
+									path="/purchasecheckout/:orderID"
+									element={
+										<>
+											<div className="col--main">
+												<h1>
+													<div className="display-1-intro">
+														Portas Esquivel & Asociados
+													</div>
+												</h1>
+												<div className="display-1--subtitle">
+													¡Gracias por su compra!
+												</div>
+												<div className="purchaseCards--container">
+													<PurchaseCheckOut />
 												</div>
 											</div>
 										</>

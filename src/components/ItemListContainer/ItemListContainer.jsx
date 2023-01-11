@@ -19,7 +19,7 @@ export default function ItemListContainer() {
 					setIsLoading(false);
 				})
 				.catch((error) => {
-					console.error(
+					console.warn(
 						"Error en ItemListContainer.jsx función getItems():",
 						error
 					);
@@ -32,7 +32,7 @@ export default function ItemListContainer() {
 					setIsLoading(false);
 				})
 				.catch((errorMsg) => {
-					console.error(
+					console.warn(
 						"Error en ItemListContainer.jsx función getItemsCategory(categoryID):",
 						errorMsg
 					);

@@ -18,7 +18,7 @@ export default function ItemDetailContainer() {
 				setIsLoading(false);
 			})
 			.catch((error) => {
-				console.error(
+				console.warn(
 					"Error en ItemDetailContainer.jsx función getSingleItem(itemID) Item no encontrado.",
 					error
 				);

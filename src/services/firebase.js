@@ -8,6 +8,7 @@ import {
 	getDocs,
 	query,
 	where,
+	addDoc,
 } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -53,18 +54,24 @@ export async function getItems() {
 export async function getItemsCategory(categoryID) {
 	const servicesRef = collection(db, "services");
 
-	const queryCategorySnapshot = query(servicesRef, where("categoria", "==", categoryID));
+	const queryCategorySnapshot = query(
+		servicesRef,
+		where("categoria", "==", categoryID)
+	);
 
 	const docsSnapshot = await getDocs(queryCategorySnapshot);
 	const docsArray = docsSnapshot.docs;
 
 	const dataDocs = docsArray.map((doc) => {
 		return { ...doc.data(), id: doc.id };
-		
 	});
 	return dataDocs;
 }
 
-export async function sendItemsToFirebase(){
+export async function sendPurchaseOrder(order) {
+	const ordersRef = collection(db, "orders");
 
+	let newPurchaseOrder = await addDoc(ordersRef, order);
+
+	return newPurchaseOrder.id;
 }

@@ -1,5 +1,4 @@
-.button-cart,
-.button-cart__purchase {
+.button-cart{
 	cursor: pointer;
 	display: inline-block;
 	text-decoration: none;
@@ -12,8 +11,7 @@
 	align-self: top;
 }
 
-.button-cart:hover,
-.button-cart__purchase:hover {
+.button-cart:hover {
 	background-color: #fff7ef;
 	color: black;
 }

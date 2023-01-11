@@ -4,6 +4,8 @@ import ItemCount from "../ItemCount/ItemCount";
 import Button from "../Button/Button";
 import "./ItemDetail.css";
 import { cartContext } from "../../storage/cartContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ItemDetail(props) {
 	const { addToCart } = useContext(cartContext);
@@ -30,6 +32,16 @@ export default function ItemDetail(props) {
 	} else {
 		function handleAddToCart(cartQty) {
 			addToCart(props.product, cartQty);
+			toast.success(`El producto ${props.product.title} fue agregado al carrito`, {
+				position: "top-right",
+				autoClose: 1500,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "colored",
+				});
 			setQtyInStock(Math.max(0, qtyInStock - cartQty));
 		}
 
@@ -56,6 +68,18 @@ export default function ItemDetail(props) {
 							onHandInventory={props.product.cantidad}
 							itemShownOnScreen={props.product.id}
 							onAddToCart={handleAddToCart}
+						/>
+						<ToastContainer
+							position="top-right"
+							autoClose={1500}
+							hideProgressBar={false}
+							newestOnTop={false}
+							closeOnClick
+							rtl={false}
+							pauseOnFocusLoss
+							draggable
+							pauseOnHover
+							theme="colored"
 						/>
 						<span className="cartCardDetail-content__title">
 							{qtyInStock} unidades disponibles

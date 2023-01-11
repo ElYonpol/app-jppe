@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
 import "../ItemDetail/ItemDetail.css";
-import "../Button/Button.css"
+import "../Button/Button.css";
 
 //Por ahora este componente es para mostrar los símbolos + y - junto con la cantidad
-//que luego el usuario iría a comprar, el botón de "Agregar item" y 
+//que luego el usuario iría a comprar, el botón de "Agregar item" y
 //el botón para ir al carrito.
 //El límite máximo de compra es el stock del producto.
 
