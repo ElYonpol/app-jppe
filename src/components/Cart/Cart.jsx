@@ -88,9 +88,10 @@ export function CartTotal() {
 	const [buyerData, setBuyerData] = useState({
 		name: "",
 		email: "",
+		email2:"",
 		phone: "",
 	});
-	const [formError, setFormError] = useState(null);
+	const [formError, setFormError] = useState("");
 
 	const totalValueInCart = cartValues.totalValueInCartfn();
 
@@ -137,8 +138,16 @@ export function CartTotal() {
 			return setFormError("Por favor ingrese su dirección de e-mail.");
 		}
 
+		if (!buyerData.email2) {
+			return setFormError("Por favor re-ingrese su dirección de e-mail por segunda vez.");
+		}
+
 		if (!buyerData.phone) {
 			return setFormError("Por favor ingrese su número de teléfono.");
+		}
+
+		if (buyerData.email !== buyerData.email2) {
+			return setFormError("Sus direcciones de e-mail no coinciden.");
 		}
 
 		handlePurchaseOrder(buyerData);
@@ -193,6 +202,13 @@ export function CartTotal() {
 						title="Dirección de e-mail: "
 						type="email"
 						value={buyerData.email}
+						onChange={handleInputChange}
+					/>
+					<InputForm
+						name="email2"
+						title="Reingrese su e-mail: "
+						type="email"
+						value={buyerData.email2}
 						onChange={handleInputChange}
 					/>
 					<InputForm
