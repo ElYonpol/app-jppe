@@ -8,7 +8,7 @@ export default function PurchaseCheckOut() {
 	return (
 		<>
 			<div className="display-1--description">
-				Su número de orden de compra es{" "}
+				Su número de orden de compra es
 				<p className="display-1--subtitle">{orderID}</p>.
 			</div>
 			<Link
