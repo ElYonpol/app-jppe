@@ -1,10 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import logo from "../../assets/icons/icon_pe.jpg";
 import "./NavBar.css";
 
 export default function NavBar() {
+	let activeClassName = "nav__link--active";
+	let inactiveClassName = "nav__link";
+
 	return (
 		<header id="header">
 			<nav className="bs--navbar">
@@ -21,22 +24,48 @@ export default function NavBar() {
 					<div className="col">
 						<ul className="nav__list">
 							<li>
-								<Link to="/category/Estética" className="nav__link" title="Ver productos de la Categoría Estética">Estética</Link>
+								<NavLink
+									to="/category/Estética"
+									className={({ isActive }) =>
+										isActive ? activeClassName : inactiveClassName
+									}
+									title="Ver productos de la Categoría Estética"
+								>
+									Estética
+								</NavLink>
 							</li>
 							<li>
-								<Link to="/category/Prótesis" className="nav__link" title="Ver productos de la Categoría Prótesis">Prótesis</Link>
+								<NavLink
+									to="/category/Prótesis"
+									className={({ isActive }) =>
+										isActive ? activeClassName : inactiveClassName
+									}
+									title="Ver productos de la Categoría Prótesis"
+								>
+									Prótesis
+								</NavLink>
 							</li>
 							<li>
-								<Link
+								<NavLink
 									to="/category/Rehabilitación"
-									className="nav__link"
+									className={({ isActive }) =>
+										isActive ? activeClassName : inactiveClassName
+									}
 									title="Ver productos de la Categoría Rehabilitación"
-								>Rehabilitación</Link>
+								>
+									Rehabilitación
+								</NavLink>
 							</li>
 							<li>
-								<Link to="/servicios" className="nav__link" title="Ver todos los productos">
+								<NavLink
+									to="/servicios"
+									className={({ isActive }) =>
+										isActive ? activeClassName : inactiveClassName
+									}
+									title="Ver todos los productos"
+								>
 									Servicios
-								</Link>
+								</NavLink>
 							</li>
 							<li>
 								<Link to="/cart" className="nav__link">
