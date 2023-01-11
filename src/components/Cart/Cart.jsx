@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
+import InputForm from "../InputForm/InputForm";
 import "./Cart.css";
 import { cartContext } from "../../storage/cartContext";
 import { sendPurchaseOrder } from "../../services/firebase";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
 
 export default function Cart(props) {
 	const { removeItem } = useContext(cartContext);
@@ -85,6 +85,11 @@ export function CartTotal() {
 	const cartValues = useContext(cartContext);
 	let navigateToURL = useNavigate();
 	const { cart, emptyCart } = useContext(cartContext);
+	const [buyerData, setBuyerData] = useState({
+		name: "",
+		email: "",
+		phone: "",
+	});
 
 	const totalValueInCart = cartValues.totalValueInCartfn();
 
@@ -112,6 +117,15 @@ export function CartTotal() {
 			});
 	}
 
+	function handleInputChange(evt) {
+		let nameInput = evt.target.name;
+		let value = evt.target.value;
+
+		const newBuyerData = { ...buyerData };
+		newBuyerData[nameInput] = value;
+		setBuyerData(newBuyerData);
+	}
+
 	if (!totalQtyInCart) {
 		return (
 			<>
@@ -131,15 +145,6 @@ export function CartTotal() {
 	return (
 		<>
 			<div className="purchaseCard purchaseCard--Total">
-				<Button
-					onButtonClick={() => handlePurchaseOrder()}
-					className="button-cart__Purchase"
-					title="Finalizar Compra"
-					disabled={false}
-				>
-					Comprar
-				</Button>
-				<div>
 					<span>
 						Total Compra ${totalValueInCart.toLocaleString()} -{" "}
 						{totalQtyInCart.toLocaleString()} {unidOunids}
@@ -152,7 +157,39 @@ export function CartTotal() {
 					>
 						🗑
 					</Button>
-				</div>
+			</div>
+			<div>
+				<form className="inputForm__container">
+					<InputForm
+						name="name"
+						title="Nombre completo: "
+						type="text"
+						value={buyerData.name}
+						onChange={handleInputChange}
+					/>
+					<InputForm
+						name="email"
+						title="Dirección de e-mail: "
+						type="email"
+						value={buyerData.email}
+						onChange={handleInputChange}
+					/>
+					<InputForm
+						name="phone"
+						title="Teléfono: "
+						type="tel"
+						value={buyerData.phone}
+						onChange={handleInputChange}
+					/>
+					<Button
+					onButtonClick={() => handlePurchaseOrder()}
+					className="button-cart__Purchase"
+					title="Finalizar Compra"
+					disabled={false}
+				>
+					Comprar
+				</Button>
+				</form>
 			</div>
 		</>
 	);
