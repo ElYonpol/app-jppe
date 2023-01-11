@@ -2,7 +2,7 @@ import React from "react";
 import Item from "../Item/Item";
 
 export default function ItemList(props) {
-	if (Array.isArray(props.products)) {
+	if (Array.isArray(props.products) && props.products.length > 0) {
 		return (
 			<>
 				{props.products.map((item) => {
@@ -25,10 +25,6 @@ export default function ItemList(props) {
 			</>
 		);
 	} else {
-		return (
-			<>
-				<Item categoria="Error" />
-			</>
-		);
+		return <Item categoria="Error" />;
 	}
 }

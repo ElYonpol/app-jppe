@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import "../ItemList/ItemList.css";
+import "../ItemDetail/ItemDetail.css";
 
 export default function Item(props) {
 	if (
@@ -10,10 +11,14 @@ export default function Item(props) {
 		props.categoria === null
 	) {
 		return (
-			<div className={`cartCardDetail cartCard--error`}>
+			<div className="cartCardDetail">
+				<div className="cartCardDetail__image cartCard--error"></div>
 				<div className="cartCardDetail-content">
-					<p className="cartCardDetail-content__title">Error</p>
-					<p className="cartCardDetail-content__body">Categoría inexistente</p>
+					<p className="cartCardDetail-content__category">Error</p>
+					<p className="cartCardDetail-content__title">Categoría inexistente</p>
+					<p className="cartCardDetail-content__body">
+						La categoría buscada no existe en la base de datos.
+					</p>
 				</div>
 			</div>
 		);

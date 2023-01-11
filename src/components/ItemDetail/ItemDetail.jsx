@@ -19,7 +19,7 @@ export default function ItemDetail(props) {
 	) {
 		return (
 			<div className="cartCardDetail">
-				<div className={`cartCardDetail__image cartCard--error`}></div>
+				<div className="cartCardDetail__image cartCard--error"></div>
 				<div className="cartCardDetail-content">
 					<p className="cartCardDetail-content__category">Error</p>
 					<p className="cartCardDetail-content__title">Producto inexistente</p>

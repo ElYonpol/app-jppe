@@ -1,11 +1,13 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import "./App.css";
 import "./index.css";
 import "./components/ItemList/ItemList.css";
 import "./components/Cart/Cart.css";
 
+import NotFoundRouting from "./components/NotFoundPage/NotFoundRouting";
+import MainHeading from "./components/MainHeading/MainHeading";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import NavBar from "./components/NavBar/NavBar";
@@ -25,19 +27,16 @@ function App() {
 					<div className="App grid--container">
 						<NavBar />
 						<section id="main">
-							<Routes>
+							<NotFoundRouting path="*">
 								<Route
 									path="/"
 									element={
 										<>
-											<div className="col--main">
-												<h1>
-													<div className="display-1-intro">
-														Portas Esquivel & Asociados
-													</div>
-												</h1>
-												<Greeting />
-											</div>
+											<MainHeading
+												intro="Portas Esquivel & Asociados"
+												subtitle="Odontología de Excelencia"
+											/>
+											<Greeting />
 										</>
 									}
 								/>
@@ -46,14 +45,10 @@ function App() {
 									element={
 										<>
 											<div className="col--main">
-												<h1>
-													<div className="display-1-intro">
-														Portas Esquivel & Asociados
-													</div>
-												</h1>
-												<div className="display-1--subtitle">
-													Servicios por Categoría
-												</div>
+												<MainHeading
+													intro="Portas Esquivel & Asociados"
+													subtitle="Servicios por Categoría"
+												/>
 												<div className="cartCards--container">
 													<ItemListContainer />
 												</div>
@@ -66,14 +61,10 @@ function App() {
 									element={
 										<>
 											<div className="col--main">
-												<h1>
-													<div className="display-1-intro">
-														Portas Esquivel & Asociados
-													</div>
-												</h1>
-												<div className="display-1--subtitle">
-													Detalle del servicio
-												</div>
+											<MainHeading
+													intro="Portas Esquivel & Asociados"
+													subtitle="Detalle del servicio"
+												/>
 												<div className="cartCardDetail--container">
 													<ItemDetailContainer />
 												</div>
@@ -86,14 +77,10 @@ function App() {
 									element={
 										<>
 											<div className="col--main">
-												<h1>
-													<div className="display-1-intro">
-														Portas Esquivel & Asociados
-													</div>
-												</h1>
-												<div className="display-1--subtitle">
-													Servicios Ofrecidos
-												</div>
+											<MainHeading
+													intro="Portas Esquivel & Asociados"
+													subtitle="Servicios ofrecidos"
+												/>
 												<div className="cartCards--container">
 													<ItemListContainer />
 												</div>
@@ -106,14 +93,10 @@ function App() {
 									element={
 										<>
 											<div className="col--main">
-												<h1>
-													<div className="display-1-intro">
-														Portas Esquivel & Asociados
-													</div>
-												</h1>
-												<div className="display-1--subtitle">
-													Carrito de compras
-												</div>
+											<MainHeading
+													intro="Portas Esquivel & Asociados"
+													subtitle="Carrito de compras"
+												/>
 												<div className="purchaseCards--container">
 													<CartTotal />
 													<CartContainer />
@@ -127,14 +110,10 @@ function App() {
 									element={
 										<>
 											<div className="col--main">
-												<h1>
-													<div className="display-1-intro">
-														Portas Esquivel & Asociados
-													</div>
-												</h1>
-												<div className="display-1--subtitle">
-													¡Gracias por su compra!
-												</div>
+											<MainHeading
+													intro="Portas Esquivel & Asociados"
+													subtitle="¡Gracias por su compra!"
+												/>
 												<div className="purchaseCards--container">
 													<PurchaseCheckOut />
 												</div>
@@ -142,19 +121,7 @@ function App() {
 										</>
 									}
 								/>
-								<Route
-									path="*"
-									element={
-										<>
-											<h1>
-												<div className="display-1-intro">
-													Error 404: Recurso no encontrado.
-												</div>
-											</h1>
-										</>
-									}
-								/>
-							</Routes>
+							</NotFoundRouting>
 						</section>
 						<Footer />
 					</div>

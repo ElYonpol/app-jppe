@@ -3,9 +3,6 @@ import "../../index.css";
 export default function Greeting() {
 	return (
 		<>
-			<div className="display-1--subtitle">Odontología de Excelencia</div>
-			<br />
-			<br />
 			<div className="display-1--subtitle">
 				Seleccione el Menú "SERVICIOS" para ver las Cards.
 			</div>
