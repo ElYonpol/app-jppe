@@ -10,7 +10,7 @@
 
 Este desarrollo se refiere a un sitio web del tipo SPA para un consultorio odontológico: Página principal, Categorías de Servicios odontológicos ofrecidos, Compras de Servicios y Carrito de Compras. Intercambia información con el servicio de Firebase para obtener información de productos ofrecidos y para cargar los pedidos generados por el usuario a través del carrito de compras.
 
-![ejemplo sitio](./src/assets/images/video_app-jppe320.gif)
+![ejemplo sitio](./src/assets/images/video_app-jppe640.gif)
 
 ### **Motivación**
 
